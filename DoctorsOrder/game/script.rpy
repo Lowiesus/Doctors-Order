@@ -222,6 +222,6 @@ label start:
 
     label ending:
         scene black
-        "Thank you for playing PixelCure!"
+        "Thank you for playing Doctor's Order: Emergency Room Edition!"
 
     return
