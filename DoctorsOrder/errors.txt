@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 246: expected 'label_name' not found.
-    jump 
-        ^
+File "game/script.rpy", line 310: expected 'image_name_component' not found.
+    hide 
+         ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 24 18:47:18 2025
+Mon Mar 24 20:02:25 2025
