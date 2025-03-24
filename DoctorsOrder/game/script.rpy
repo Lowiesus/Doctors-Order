@@ -47,6 +47,9 @@ transform hospital_default:
 transform emergency_default:
     zoom 1.6
 
+transform clinic_clinic_default:
+    zoom 1.5
+
 
 # The game starts here.
 
@@ -179,7 +182,7 @@ label answer_confident_scene_1:
 
     # Scene 2: Diagnostic Process - Performing Tests
     label diagnostics:
-    scene clinic 
+    scene clinic at clinic_clinic_default
     with fade
     "You move the patient to the examination room and observe the knee."
 
@@ -220,19 +223,43 @@ label answer_confident_scene_2:
 
     # Scene 3: Diagnosis Confirmation
     label diagnosis_result:
-        scene xray_review
-        "The X-ray shows a clear kneecap fracture. The patient waits nervously."
+    scene clinic at clinic_clinic_default
+    with fade
+    "The X-ray shows a clear kneecap fracture. The patient waits nervously for your explanation."
 
-        menu:
-            "How do you deliver the news?"
-            "Your knee has a fracture - which is treatable, and don’t worry! We’ll walk you through every step of the operation.":
-                jump answer_confident
-            "You’ll need surgery to fix your knee. It's common and you’ll surely recover.":
-                "The patient tries to stay calm."
-                jump answer_neutral
-            "Dang, your knee is broken, we’ll have to operate on it.":
-                "The patient looks alarmed."
-                jump answer_anxious
+    menu:
+        "How do you deliver the news?"
+        "Your knee has a fracture – which is treatable, and don’t worry! We’ll walk you through every step of the operation.":
+            jump answer_confident_scene_3
+        "You’ll need surgery to fix your knee. It's common and you’ll surely recover.":
+            jump answer_neutral_scene_3
+        "Dang, your knee is broken. We’ll have to operate on it.":
+            jump answer_anxious_scene_3
+
+label answer_anxious_scene_3:
+    show patient teary at sycamore_small, left
+    "The patient looks alarmed by your blunt words."
+    hide patient teary
+    show patient teary talk at sycamore_small, left
+    patient "Wait, what?! Surgery?! That sounds really serious..."
+    "Their anxiety spikes."
+    jump surgery_prep
+
+label answer_neutral_scene_3:
+    show patient sad at sycamore_small, left
+    "The patient tries to stay calm, though they seem unsure."
+    hide patient sad
+    show patient sad talk at sycamore_small, left
+    patient "Okay... I guess if it’s necessary. Just tell me what I have to do."
+    jump surgery_prep
+
+label answer_confident_scene_3:
+    show patient happy at sycamore_small, left
+    "The patient breathes a little easier, reassured by your confident and supportive tone."
+    hide patient happy
+    show patient happy talk at sycamore_small, left
+    patient "Thank you, Doctor. I was really nervous, but you make it sound manageable."
+    jump surgery_prep
 
     # Scene 4: Surgical Preparation - Minigame Style
     label surgery_prep:
