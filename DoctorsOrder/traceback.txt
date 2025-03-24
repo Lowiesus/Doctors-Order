@@ -1,18 +1,18 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 40, in script
-    scene hospital at clinic_default
-  File "game/script.rpy", line 40, in <module>
-    scene hospital at clinic_default
-NameError: name 'clinic' is not defined
+  File "game/script.rpy", line 142, in script
+    show patient sad at sycamore_default, right
+  File "game/script.rpy", line 142, in <module>
+    show patient sad at sycamore_default, right
+NameError: name 'sycamore_default' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 40, in script
-    scene hospital at clinic_default
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1258, in execute
+  File "game/script.rpy", line 142, in script
+    show patient sad at sycamore_default, right
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in show_imspec
     at_list = [ renpy.python.py_eval(i) for i in at_list ]
@@ -22,11 +22,11 @@ Full traceback:
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 40, in <module>
-    scene hospital at clinic_default
-NameError: name 'clinic' is not defined
+  File "game/script.rpy", line 142, in <module>
+    show patient sad at sycamore_default, right
+NameError: name 'sycamore_default' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
 DoctorsOrder 1.0
-Mon Mar 24 16:25:04 2025
+Mon Mar 24 18:00:11 2025

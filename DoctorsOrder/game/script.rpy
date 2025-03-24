@@ -5,10 +5,21 @@
 
 define e = Character("Eileen")
 define doctor_sycamore = Character("Doctor Sycamore")
+define announcer = Character("Announcer")
+define patient = Character("Patient")
 
 # image for doctor sycamoer
-
 image sycamore smiling = "doctor_sycamore.png"
+
+#image for the patient
+image patient neutral ="patient neutral.png"
+image patient happy = "patient happy.png"
+image patient sad = "patient sad.png"
+image patient teary = "patient teary.png"
+image patient neutral talk = "patient neutral talk.png"
+image patient happy talk = "patient happy talk.png"
+image patient sad talk = "patient sad talk.png"
+image patient teary talk = "patient teary talk.png"
 
 # background images scenes
 image clinic = "clinic.jpg"
@@ -33,6 +44,9 @@ transform clinic_default:
 transform hospital_default:
     zoom 1.0
 
+transform emergency_default:
+    zoom 1.6
+
 
 # The game starts here.
 
@@ -44,80 +58,165 @@ label start:
         "Butot balat lumilipad"
 
         scene hospital at hospital_default
-        with fade
 
         "You are a new resident doctor in Skidi Toilet Hospital."
 
-    # Scene: Welcome Screen
-    label welcome_screen: 
-        scene office at clinic_default
+# Scene: Welcome Screen
+label welcome_screen: 
+    scene office at clinic_default
+    with fade
 
-        show sycamore smiling at sycamore_small, right
+    play music "background music.mp3" volume 0.1
 
-            # line 1
-        doctor_sycamore "Welcome aboard doc! I'll be guiding you through our protocols and ensuring that our response is always swift and effective!"
-            
-            # line 2
-        doctor_sycamore "It's gonna be intense but don't worry, we've got each other's backs. We'll also make sure that you'll learrn fast, just stay sharp, breath and do your best."
-            
-            # line 3
-        doctor_sycamore "First, we'll have to walk through some of our protocols, our protocols well ensure that we will be professional inside the hospital and with this, it'll safer for the patience as well"
-            
-            # line 4
-        doctor_sycamore "Alright, firstly is the patient's information."
-            
-            # line 5
-        doctor_sycamore "It is our protocal to make sure that we get the patient's personal information. We also have to make sure that those information will only be used for medical purposes only"
+    show sycamore smiling at sycamore_small, right
 
-            # line 6
-        doctor_sycamore "It is a crime indeed if you were to use anyone's personal information outside the hospital facility outside the hospital so please make sure their information will only be used within the vicinity of the hospital or for medical use only" 
+    # line 1
+    doctor_sycamore "Welcome aboard, doc! I'm Doctor Sycamore, and I’ll be your guide through our protocols, ensuring that our response is always swift and effective."
 
-            # line 7
-        doctor_sycamore "Second, we have to know if the patient went through any medical operation from the past, of course we have to understand our patient's state of health and determine the possible treatments we could do before treating them"
+    # line 2
+    doctor_sycamore "It’s going to be intense — but don’t worry. We’ve got each other’s backs. You’ll learn quickly, just stay sharp, breathe, and do your best."
 
-            # line 8
-        doctor_sycamore "If the patient had a previous operation, we would need to know the details of the operation and the medical personnel involved."
+    # line 3
+    doctor_sycamore "First, we’ll walk through some essential protocols. These will help us remain professional within the hospital and ensure our patients’ safety."
 
-            # line 9
-        doctor_sycamore "And lastly, treat the patient with care."
-            
-            # line 10
-        doctor_sycamore "Remember, it's always best to talk to a doctor for advice and to make sure that you're taking the right care."
-   
-   
-   
-    # Scene 1: Patient’s Arrival
-    label patient_arrival:
-        scene emergency at clinic_default
-        "A teenager arrives at the hospital with a knee injury from a soccer game."
-        "The patient looks nervous as they sit down in the waiting area."
+    # line 4
+    doctor_sycamore "Let’s start with patient information."
 
-        menu:
-            "How do you approach the patient?"
-            "Hi, my name is Doctor Jest. You’re in good hands and we’ll do our best to take care of you. Now what happened with your knee? Do you have previous medical treatments that we should know about?":
-                jump diagnostics
-            "What happened with your knee?":
-                "The patient seems a little nervous. Maybe a friendlier tone would help."
-                jump diagnostics
-            "Ermmm, your knee looks bad. What happened?":
-                "The patient looks uncomfortable and more anxious."
-                jump diagnostics
+    # line 5
+    doctor_sycamore "It’s our protocol to collect each patient’s personal details, strictly for medical purposes only."
+
+    # line 6
+    doctor_sycamore "Using someone’s personal information outside of the hospital is a serious offense. Always ensure this data stays within hospital use and strictly for healthcare needs."
+
+    # line 7
+    doctor_sycamore "Next, we need to check if the patient has had any prior medical procedures. Understanding their medical history helps us plan the most effective treatment."
+
+    # line 8
+    doctor_sycamore "If there’s been a past operation, we’ll need specific details — including the procedure and the medical personnel involved."
+
+    # line 9
+    doctor_sycamore "Lastly, treat every patient with care and compassion."
+
+    # line 10
+    doctor_sycamore "Whenever possible, encourage them to consult with a doctor and ensure they feel supported throughout their treatment."
+
+    # line 10 - 1
+    doctor_sycamore "We must also do our best to avoid making patients feel anxious."
+    doctor_sycamore "Deliver news in a calm and friendly manner — this helps ease their worries and builds trust."
+
+    hide sycamore smiling
+    stop music fadeout 1.0
+
+    scene emergency at emergency_default
+    with fade
+
+    play music "buzzer.mp3" volume 0.1
+
+    # line 11
+    announcer "*BZZT!! BZZT!!* Attention: A patient has arrived with a possible knee injury. Any available doctors, please report to the emergency room! *BZZT!! BZZT!!*"
+
+    # line 12
+    stop music fadeout 1.0
+
+    scene office at clinic_default
+    with fade
+
+    play music "background music.mp3" volume 0.1
+
+    show sycamore smiling at sycamore_small, right
+    doctor_sycamore "Well, doctor — duty calls. Let’s get moving and head to the emergency room."
+
+
+
+# Scene 1: Patient’s Arrival
+label patient_arrival:
+    scene emergency at emergency_default
+    with fade
+
+    show patient neutral at sycamore_small, left 
+
+    "A teenager arrives at the hospital with a knee injury from a soccer game."
+    "They appear nervous as they sit in the waiting area."
+
+    hide patient neutral
+
+    menu:
+        "How do you approach the patient?"
+        "Hi, my name is Doctor Jest. You’re in good hands — we’ll do our best to take care of you. Can you tell me what happened to your knee? Have you had any previous medical treatments we should know about?":
+            jump answer_confident_scene_1
+        "What happened to your knee?":
+            jump answer_neutral_scene_1
+        "Ermm... your knee looks bad. What happened?":
+            jump answer_anxious_scene_1
+
+label answer_anxious_scene_1:
+    show patient teary at sycamore_small, left
+    "The patient answers with an anxious and guarded tone."
+    hide patient teary
+    show patient teary talk at sycamore_small, left
+    patient "Uhm... it happened during a game. It hurts a lot..."
+    "They look more uncomfortable and anxious."
+
+    jump diagnostics
+
+label answer_neutral_scene_1:
+    show patient sad at sycamore_small, left
+    "The patient seems a little uneasy. Perhaps a warmer tone would have helped."
+    hide patient sad
+    show patient sad talk at sycamore_small, left
+    patient "I got injured during a soccer game... it's been hurting since then."
+    "They answer with a flat, neutral tone."
+    jump diagnostics
+
+label answer_confident_scene_1:
+    show patient happy at sycamore_small, left
+    "The patient smiles slightly, feeling reassured by your calm approach."
+    hide patient happy 
+    show patient happy talk at sycamore_small, left
+    patient "Thanks, Doctor. I hurt my knee while playing soccer. No surgeries before, but I had a sprain last year."
+    "They respond with a trusting and confident tone."
+    jump diagnostics
 
     # Scene 2: Diagnostic Process - Performing Tests
     label diagnostics:
-        scene exam_room
-        "You move the patient to the examination room and observe the knee."
+    scene clinic 
+    with fade
+    "You move the patient to the examination room and observe the knee."
 
-        menu:
-            "What do you say while performing the diagnostic?"
-            "I’ll be checking your knee, let me know if anything hurts okay?":
-                jump diagnosis_result
-            "We need an X-ray to see inside the knee and check for tearing or fractures.":
-                "The patient nods but still looks worried."
-                jump diagnosis_result
-            "We will proceed to do some tests, you’ll find out soon enough.":
-                "The patient frowns and looks confused."
-                jump diagnosis_result
+    menu:
+        "What do you say while performing the diagnostic?"
+        "I’ll be checking your knee, let me know if anything hurts, okay?":
+            jump answer_confident_scene_2
+        "We need an X-ray to see inside the knee and check for tearing or fractures.":
+            jump answer_neutral_scene_2
+        "We will proceed to do some tests. You’ll find out soon enough.":
+            jump answer_anxious_scene_2
+
+label answer_anxious_scene_2:
+    show patient teary at sycamore_small, left
+    "The patient frowns and looks confused by your vague explanation."
+    hide patient teary
+    show patient teary talk at sycamore_small, left
+    patient "Wait... what kind of tests? Is it serious?"
+    "They seem uneasy and less trusting."
+    jump diagnosis_result
+
+label answer_neutral_scene_2:
+    show patient sad at sycamore_small, left
+    "The patient nods slowly, but their worried expression remains."
+    hide patient sad
+    show patient sad talk at sycamore_small, left
+    patient "Okay... if you say so. I just hope it's not too bad."
+    jump diagnosis_result
+
+label answer_confident_scene_2:
+    show patient happy at sycamore_small, left
+    "The patient relaxes a little, comforted by your calm tone."
+    hide patient happy
+    show patient happy talk at sycamore_small, left
+    patient "Alright, Doctor. I’ll let you know if anything feels painful."
+    jump diagnosis_result
+
 
     # Scene 3: Diagnosis Confirmation
     label diagnosis_result:
@@ -127,13 +226,13 @@ label start:
         menu:
             "How do you deliver the news?"
             "Your knee has a fracture - which is treatable, and don’t worry! We’ll walk you through every step of the operation.":
-                jump surgery_prep
+                jump answer_confident
             "You’ll need surgery to fix your knee. It's common and you’ll surely recover.":
                 "The patient tries to stay calm."
-                jump surgery_prep
+                jump answer_neutral
             "Dang, your knee is broken, we’ll have to operate on it.":
                 "The patient looks alarmed."
-                jump surgery_prep
+                jump answer_anxious
 
     # Scene 4: Surgical Preparation - Minigame Style
     label surgery_prep:
