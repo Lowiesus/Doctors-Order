@@ -4,27 +4,91 @@
 # name of the character.
 
 define e = Character("Eileen")
-define dc = Character("Sycamore")
+define doctor_sycamore = Character("Doctor Sycamore")
+
+# image for doctor sycamoer
+
+image sycamore smiling = "doctor_sycamore.png"
+
+# background images scenes
+image clinic = "clinic.jpg"
+image emergency = "emergency.png"
+image hospital = "hospital.png"
+image office = "office.jpg"
+
+
+# Transformations for doctor sycamore's image
+
+transform sycamore_small:
+    zoom 0.5
+    xalign 1
+    yalign 0.5
+
+# background images settings
+transform clinic_default:
+    zoom 2.5
+    xalign 0.5
+    yalign 0.0
+
+transform hospital_default:
+    zoom 1.0
 
 
 # The game starts here.
 
 label start:
 
-
     # Scene: Loading Screen
     label hints:
-        scene hospital_lobby
+        scene hospital at hospital_default
         "Butot balat lumilipad"
 
-    scene hospital_day
-    with fade
+        scene hospital at hospital_default
+        with fade
 
-    "You are a new resident doctor in St. Angels Hospital."
+        "You are a new resident doctor in Skidi Toilet Hospital."
 
+    # Scene: Welcome Screen
+    label welcome_screen: 
+        scene office at clinic_default
+
+        show sycamore smiling at sycamore_small, right
+
+            # line 1
+        doctor_sycamore "Welcome aboard doc! I'll be guiding you through our protocols and ensuring that our response is always swift and effective!"
+            
+            # line 2
+        doctor_sycamore "It's gonna be intense but don't worry, we've got each other's backs. We'll also make sure that you'll learrn fast, just stay sharp, breath and do your best."
+            
+            # line 3
+        doctor_sycamore "First, we'll have to walk through some of our protocols, our protocols well ensure that we will be professional inside the hospital and with this, it'll safer for the patience as well"
+            
+            # line 4
+        doctor_sycamore "Alright, firstly is the patient's information."
+            
+            # line 5
+        doctor_sycamore "It is our protocal to make sure that we get the patient's personal information. We also have to make sure that those information will only be used for medical purposes only"
+
+            # line 6
+        doctor_sycamore "It is a crime indeed if you were to use anyone's personal information outside the hospital facility outside the hospital so please make sure their information will only be used within the vicinity of the hospital or for medical use only" 
+
+            # line 7
+        doctor_sycamore "Second, we have to know if the patient went through any medical operation from the past, of course we have to understand our patient's state of health and determine the possible treatments we could do before treating them"
+
+            # line 8
+        doctor_sycamore "If the patient had a previous operation, we would need to know the details of the operation and the medical personnel involved."
+
+            # line 9
+        doctor_sycamore "And lastly, treat the patient with care."
+            
+            # line 10
+        doctor_sycamore "Remember, it's always best to talk to a doctor for advice and to make sure that you're taking the right care."
+   
+   
+   
     # Scene 1: Patient’s Arrival
     label patient_arrival:
-        scene hospital_lobby
+        scene emergency at clinic_default
         "A teenager arrives at the hospital with a knee injury from a soccer game."
         "The patient looks nervous as they sit down in the waiting area."
 
