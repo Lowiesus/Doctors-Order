@@ -528,6 +528,7 @@ style game_menu_label:
 style game_menu_label_text:
     size gui.title_text_size
     color "#ffffff"
+    hover_color "#ffffff"
     yalign 0.5
 
 style return_button:

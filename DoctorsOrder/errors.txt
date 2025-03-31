@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 334: style property navigation is not known.
-    style screen navigation
-                           ^
+File "game/screens.rpy", line 531: expected 'simple_expression' not found.
+    hover_color
+               ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 31 18:13:45 2025
+Mon Mar 31 21:10:14 2025
