@@ -1,6 +1,6 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing the color property of style navigation_button:
+While processing the hover_color property of style game_menu_label_text:
   File "renpy/common/00start.rpy", line 201, in script
     python:
   File "renpy/common/00start.rpy", line 201, in script
@@ -13,7 +13,7 @@ While processing the color property of style navigation_button:
     __update()
   File "renpy/common/00stylepreferences.rpy", line 99, in _m1_00stylepreferences__update
     renpy.style.rebuild()
-Exception: Color string '' must be 3, 4, 6, or 8 hex digits long.
+Exception: Color string 'fffff' must be 3, 4, 6, or 8 hex digits long.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -49,12 +49,12 @@ Full traceback:
   File "style.pyx", line 796, in renpy.style.build_styles
   File "style.pyx", line 717, in renpy.style.build_style
   File "style.pyx", line 714, in renpy.style.build_style
-  File "gen3-static/style_functions.pyx", line 349, in style_functions.color_property
+  File "gen3-static/style_hover_functions.pyx", line 245, in style_hover_functions.hover_color_property
   File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\color.py", line 165, in __new__
     raise Exception("Color string {!r} must be 3, 4, 6, or 8 hex digits long.".format(c))
-Exception: Color string '' must be 3, 4, 6, or 8 hex digits long.
+Exception: Color string 'fffff' must be 3, 4, 6, or 8 hex digits long.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
  
-Mon Mar 31 18:15:18 2025
+Mon Mar 31 21:28:16 2025
