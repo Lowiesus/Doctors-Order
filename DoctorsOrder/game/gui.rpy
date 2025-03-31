@@ -19,6 +19,8 @@ define config.check_conflicting_properties = True
 ## GUI Configuration Variables
 ################################################################################
 
+#style for textbuttons
+
 
 ## Colors ######################################################################
 ##
@@ -28,18 +30,18 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#0066cc'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#ffffff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#66a3e0'
+define gui.hover_color = '#78a3cf'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#78a3cf'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#8888887f'
@@ -57,13 +59,13 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "aovelsansround.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "aovelsansround.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "aovelsansround.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -87,8 +89,8 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "empty.png"
+define gui.game_menu_background = "hospital.png"
 
 
 ## Dialogue ####################################################################
@@ -260,7 +262,7 @@ define gui.notify_ypos = 68
 define gui.choice_spacing = 33
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 8
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 15
@@ -452,7 +454,7 @@ init python:
         gui.choice_button_text_size = 45
 
         gui.navigation_spacing = 30
-        gui.pref_button_spacing = 15
+        gui.pref_button_spacing = 20
 
         gui.history_height = 285
         gui.history_text_width = 1035

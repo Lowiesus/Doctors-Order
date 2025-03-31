@@ -20,15 +20,24 @@ image patient neutral talk = "patient neutral talk.png"
 image patient happy talk = "patient happy talk.png"
 image patient sad talk = "patient sad talk.png"
 image patient teary talk = "patient teary talk.png"
+image knee = "knee.png"
+image knee focus = "knee focus.png"
+image knee betadine = "knee betadine.png"
+image knee inject = "knee inject.png"
+image knee open = "knee open.png"
+image knee hole = "knee hole.png"
+image knee bracket = "knee bone bracket.png"
+image knee dashline = "knee dash line.png"
 
 # background images scenes
 image clinic = "clinic.jpg"
 image emergency = "emergency.png"
 image hospital = "hospital.png"
 image office = "office.jpg"
+image operating table = "green_background.jpg"
 
 
-# Transformations for doctor sycamore's image
+# Transformations for doctor images
 
 transform sycamore_small:
     zoom 0.5
@@ -50,6 +59,20 @@ transform emergency_default:
 transform clinic_clinic_default:
     zoom 1.5
 
+transform operating_default:
+    zoom 2.7
+    yalign 4
+    xalign 0.5
+
+transform knee_default:
+    zoom 0.8
+    xalign 0.5
+    yalign 0.5
+
+transform knee_single:
+    zoom 0.8
+    xalign 0.5
+    yalign 0.5
 
 # The game starts here.
 
@@ -65,7 +88,7 @@ label start:
         "You are a new resident doctor in Skidi Toilet Hospital."
 
 # Scene: Welcome Screen
-label welcome_screen: 
+label welcome_screen:
     scene office at clinic_default
     with fade
 
@@ -344,57 +367,141 @@ label answer_anxious_scene_2:
 
 label answer_confident_scene_3:
     show patient happy at sycamore_small, left
-    "You pull up a stool beside him and show the X-ray results gently."
-    "Your voice is calm and steady, explaining the injury and the next steps clearly."
+    "You pull up a stool beside him and gently show the X-ray results."
+    "Your voice is calm and steady as you explain the injury and the next steps clearly."
+    
     hide patient happy
     show patient happy talk at sycamore_small, left
-    patient "Thank you, Doctor. I was really nervous, but you make it sound manageable."
-    "He smiles weakly, but you can see relief in his eyes."
-    "You nod and begin discussing surgery preparation."
+    patient "Thank you, Doctor. I was really nervous, but the way you explain it makes it feel manageable."
+    
+    "He smiles weakly, but you can see the relief in his eyes."
+    
+    hide patient happy
+    show patient neutral at sycamore_small, left
+    
+    "You nod and begin discussing the surgery preparation."
+    
+    you "Alright, before we proceed with the surgery, I'd like to introduce you to Doctor Sycamore."
+    
+    with fade
+    show sycamore smiling at sycamore_small, right
+    
+    hide sycamore smilling
+
+    show sycamore smilling at sycamore_small, right
+    doctor_sycamore "Good day! I'm Doctor Sycamore, and I'll be assisting with your procedure. It's a pleasure to meet you."
+    doctor_sycamore "We'll walk you through the entire process of repairing your leg, step by step."
+    
+    you "First, we'll begin with surgical preparation. We'll sanitize your leg and mark the area for the incision."
+    
+    you "Sanitizing is crucial to prevent any risk of infection."
+    
+    you "Next, we'll administer anesthesia to numb your leg. You won’t feel anything during the procedure—just a slight pinch from the injection."
+    
+    you "Finally, we'll stabilize your leg using medical-grade wires and screws. Don't worry, these are completely safe for your body."
+    
+    you "That would be all, if you have any questions please us know that we'll answer them for you."
+
+    patient "Hmmmmmm... Nope, I have no questions anymore."
+
+    doctor_sycamore "Alright! We'll notify you once the operation room is prepared and we will proceed to the medical procedure."
+
     jump surgery_prep
+
 
 label answer_neutral_scene_3:
     show patient sad at sycamore_small, left
-    "You stand beside the monitor, pointing out the fracture without much inflection."
+    "You stand beside the monitor, pointing out the fracture without much emotion."
     "Steven blinks a few times and slowly nods."
+    
     hide patient sad
     show patient sad talk at sycamore_small, left
-    patient "Okay... I guess if it’s necessary. Just tell me what I have to do."
-    "He glances at the X-ray again, still worried."
+    
+    patient "Okay... I guess if it’s necessary. Just tell me what I need to do."
+    
+    hide patient sad talk
+    show patient sad at sycamore_small, left
+    "He glances at the X-ray again, still looking worried."
+    
     "You hand him a consent form and explain the next steps."
+    
+    you "Please sign this consent form before we proceed."
+    
+    "Steven signs the form, his expression still uncertain."
+    
+    you "Now, I'd like to introduce you to Doctor Sycamore. He'll be assisting me throughout your procedure."
+    
+    show sycamore smiling at sycamore_small, right
+    with fade
+    
+    doctor_sycamore "Good day! I'm Doctor Sycamore, and I'll be helping with your procedure. It's a pleasure to meet you."
+    
+    patient "Nice to meet you, Doc! I'm Steven Nicholas."
+    
+    you "Now that you've signed the consent form, we'll begin preparing the operating room. We'll notify you when it's time to proceed."
+    
+    patient "Got it, Doc. Thanks!"
+    
     jump surgery_prep
-#mlem 
+
+
 label answer_anxious_scene_3:
     show patient teary at sycamore_small, left
     "You casually toss the X-ray onto the nearby table and shrug."
     hide patient teary
     show patient teary talk at sycamore_small, left
     patient "Wait, what?! Surgery?! That sounds really serious..."
+
     "His breathing grows shallow, panic creeping into his expression."
+
     "You realize you may have startled him unnecessarily."
+
+    you "We will be preparing the operation, please stay put. We will notify you once were ready for surgery."
+
     jump surgery_prep
 
     # Scene 4: Surgical Preparation - Minigame Style
     label surgery_prep:
-        scene operating_room
+        scene emergency at operating_default
+        "You have finished preparing the operating room and notified the patient to proceed to the the room."
+
+        with fade
+        show patient teary at sycamore_small, left
+        patient "Alright, Doctor, we're ready to proceed with the surgery."
+        
+        you "Alright you can start changing clothes on the dressing room."
+        you "Please wear this medical gown and then after that, you can laydown on the operating room and we will start the procedure"
+
+        patient "Alright doc!"
+
         "You begin the surgery on the kneecap fracture."
 
     # Step 1
+    hide patient teary
+    scene green_background at operating_default
+    with fade
+
+    show knee at knee_default
     label step1:
+        hide knee
+        show knee focus at knee_single
         "Step 1: Preparing the knee"
+        
         menu:
             "Choose the correct action:"
             "Sterilize the knee using antiseptic.":
-                jump step2
-            "Mark the knee for the incision.":
-                "You need to sterilize the knee first."
+                "We need to mark the incision first."
                 jump step1
+            "Mark the knee for the incision.":
+                jump step2
             "Cut the skin of the knee.":
                 "That’s too early! The area isn’t even sterile."
                 jump step1
 
     # Step 2
     label step2:
+        hide knee
+        show knee dash line at knee_single
         "Step 2: What’s next?"
         menu:
             "Choose the correct action:"
@@ -409,6 +516,8 @@ label answer_anxious_scene_3:
 
     # Step 3
     label step3:
+        hide knee dash line
+        show knee betadine at knee_single
         "Step 3: What’s next?"
         menu:
             "Choose the correct action:"
@@ -423,6 +532,8 @@ label answer_anxious_scene_3:
 
     # Step 4
     label step4:
+        hide knee dash line
+        show knee inject at knee_single
         "Step 4: What’s next?"
         menu:
             "Choose the correct action:"
@@ -437,6 +548,8 @@ label answer_anxious_scene_3:
 
     # Step 5
     label step5:
+        hide knee inject
+        show knee open at knee_single
         "Step 5: What’s next?"
         menu:
             "Choose the correct action:"
@@ -451,6 +564,8 @@ label answer_anxious_scene_3:
 
     # Step 6
     label step6:
+        hide knee open
+        show knee open at knee_single
         "Step 6: What’s next?"
         menu:
             "Choose the correct action:"
@@ -464,32 +579,70 @@ label answer_anxious_scene_3:
                 jump step6
 
     # Step 7
-    label step7:
-        "Step 7: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Use metal plates and wires to put the fractured kneecap back in place.":
-                jump step8
-            "Use prosthetic kneecaps to replace the fractured one.":
-                "That’s not necessary for this injury."
-                jump step7
-            "Use a hammer to break away the rest of the broken bones.":
-                "No! That would worsen the injury."
-                jump step7
+label step7:
+    hide knee open
+    show knee hole at knee_single
+    "Step 7: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Use metal plates and wires to put the fractured kneecap back in place.":
+            jump step8
+        "Use prosthetic kneecaps to replace the fractured one.":
+            "That’s not necessary for this injury."
+            jump step7
+        "Use a hammer to break away the rest of the broken bones.":
+            "No! That would worsen the injury."
+            jump step7
 
-    # Step 8
-    label step8:
-        "Final Step: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Remove the clamps of the skin and stitch the wound closed.":
-                jump recovery
-            "Hammer the metal plates and screws to make sure they’re sturdy.":
-                "No need to hammer them in."
-                jump step8
-            "Clean the bone using isopropyl alcohol to make sure the metal plates and screws are clean.":
-                "It’s too late for that now."
-                jump step8
+# Step 8
+label step8:
+    hide knee hole
+    show knee bracket at knee_single
+    "Step 8: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Remove the clamps holding the loose skin.":
+            jump step9
+        "Hammer the metal plates and screws to make sure they’re sturdy.":
+            "No need to hammer them in."
+            jump step8
+        "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
+            "It’s too late for that now."
+            jump step8
+
+# Step 9
+label step9:
+    hide knee bracket
+    show knee stitched at knee_single
+    "Step 9: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Stitch the wound closed after removing the clamps.":
+            jump step10
+        "Hammer the metal plates and screws to make sure they’re sturdy.":
+            "No need to hammer them in."
+            jump step9
+        "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
+            "It’s too late for that now."
+            jump step9
+
+# Step 10
+label step10:
+    hide knee stitched
+    show knee betadine at knee_single
+    "Step 10: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Apply antiseptic and bandage the wound.":
+            "The wound is now properly closed and protected."
+            jump recovery
+        "Hammer the metal plates and screws to make sure they’re sturdy.":
+            "No need to hammer them in."
+            jump step10
+        "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
+            "It’s too late for that now."
+            jump step10
+
     # Scene 5: Monitoring Recovery
     label recovery:
         scene recovery_room
