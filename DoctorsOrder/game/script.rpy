@@ -3,11 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-define doctor_sycamore = Character("Doctor Sycamore")
-define announcer = Character("Announcer")
-define patient = Character("Patient")
-define you = Character("You")
+define doctor_sycamore = Character("Doctor Sycamore", who_color="#4fb6a7")
+define announcer = Character("Announcer", who_you = "#dff300")
+define patient = Character("Patient", who_color = "#c84b4b")
+define you = Character("You", who_color = "#ea0d7f")
 # image for doctor sycamoer
 image sycamore smiling = "doctor_sycamore.png"
 
@@ -20,6 +19,15 @@ image patient neutral talk = "patient neutral talk.png"
 image patient happy talk = "patient happy talk.png"
 image patient sad talk = "patient sad talk.png"
 image patient teary talk = "patient teary talk.png"
+image patient neutral looking="patient neutral look.png"
+image patient happy looking = "patient happy look.png"
+image patient sad looking = "patient sad look.png"
+image patient teary looking = "patient teary look.png"
+image patient neutral talk looking = "patient neutral talklook .png"
+image patient happy talk looking = "patient happy talk look.png"
+image patient sad talk looking = "patient sad talk look.png"
+image patient teary talk looking = "patient teary talk look.png"
+
 image knee = "knee.png"
 image knee focus = "knee focus.png"
 image knee betadine = "knee betadine.png"
@@ -28,6 +36,7 @@ image knee open = "knee open.png"
 image knee hole = "knee hole.png"
 image knee bracket = "knee bone bracket.png"
 image knee dashline = "knee dash line.png"
+
 
 # background images scenes
 image clinic = "clinic.jpg"
@@ -51,7 +60,7 @@ transform clinic_default:
     yalign 0.0
 
 transform hospital_default:
-    zoom 1.0
+    zoom 2.0
 
 transform emergency_default:
     zoom 1.6
@@ -159,12 +168,12 @@ label patient_arrival:
     scene emergency at emergency_default
     with fade
 
-    show patient neutral at sycamore_small, left 
+    show patient neutral looking at sycamore_small, left 
 
     "A teenager arrives at the hospital with a knee injury from a soccer game."
     "They appear nervous as they sit in the waiting area."
 
-    hide patient neutral
+    hide patient neutral looking
 
     menu:
         "How do you approach the patient?"
@@ -176,11 +185,11 @@ label patient_arrival:
             jump answer_anxious_scene_1
 
 label answer_anxious_scene_1:
-    show patient teary at sycamore_small, left
+    show patient teary looking at sycamore_small, left
 
     "The patient responds with a guarded and anxious tone."
-    hide patient teary
-    show patient teary talk at sycamore_small, left
+    hide patient teary looking
+    show patient teary talk looking at sycamore_small, left
 
     patient "Uhm... it happened during a game. It hurts a lot..."
 
@@ -188,30 +197,30 @@ label answer_anxious_scene_1:
 
     patient "The pain got worse so I asked my coach to bring me here."
 
-    hide patient teary
-    show patient teary at sycamore_small, left
+    hide patient teary looking
+    show patient teary looking at sycamore_small, left
 
     you "I see... did anything else happen?"
 
     "He avoids eye contact and speaks with hesitation."
 
-    hide patient teary
-    show patient teary talk at sycamore_small, left
+    hide patient teary looking
+    show patient teary talk looking at sycamore_small, left
 
     patient "No... nothing else happened..."
 
-    hide patient teary
-    show patient teary at sycamore_small, left
+    hide patient teary looking
+    show patient teary looking at sycamore_small, left
 
     you "Okay. Before we proceed, what's your name? How old are you, and who are your guardians?"
 
-    hide patient teary
-    show patient teary talk at sycamore_small, left
+    hide patient teary looking
+    show patient teary talk looking at sycamore_small, left
 
     patient "My name is Steven Nicholas. I'm 18 years old, and my dad is my coach. You can just ask him the rest..."
 
-    hide patient teary
-    show patient teary at sycamore_small, left
+    hide patient teary looking
+    show patient teary looking at sycamore_small, left
 
     you "Alright, thank you. I’ll take you to the diagnostic room now so we can run some tests."
 
@@ -222,8 +231,8 @@ label answer_neutral_scene_1:
 
     "The patient seems a little uneasy. A warmer tone might have helped."
 
-    hide patient sad
-    show patient sad talk at sycamore_small, left
+    hide patient sad looking
+    show patient sad talk looking at sycamore_small, left
 
     patient "I got injured during a soccer game... it's been hurting since then."
 
@@ -231,20 +240,20 @@ label answer_neutral_scene_1:
 
     patient "It started hurting more, so I told my coach to bring me here."
 
-    hide patient sad
-    show patient sad at sycamore_small, left
+    hide patient sad looking
+    show patient sad looking at sycamore_small, left
 
     you "Don’t worry, we’ll take care of you as soon as we get the information we need."
 
     you "What's your name? How old are you? And who are your guardians?"
 
-    hide patient sad
-    show patient sad talk at sycamore_small, left
+    hide patient sad looking
+    show patient sad talk looking at sycamore_small, left
 
     patient "My name is Steven Nicholas. I’m 18. My dad is my coach — he can give you more info if you need."
 
-    hide patient sad
-    show patient sad at sycamore_small, left
+    hide patient sad looking
+    show patient sad looking at sycamore_small, left
 
     you "Thanks, Steven. I’ll bring you to the diagnostic room now so we can begin the tests."
 
@@ -255,8 +264,8 @@ label answer_confident_scene_1:
 
     "The patient smiles slightly, reassured by your calm and professional tone."
 
-    hide patient happy
-    show patient happy talk at sycamore_small, left
+    hide patient happy looking
+    show patient happy talk looking at sycamore_small, left
 
     patient "Thanks, Doctor. I hurt my knee during soccer. I didn’t have surgery before, but I did sprain it last year."
 
@@ -264,30 +273,30 @@ label answer_confident_scene_1:
 
     patient "At first I thought it was just a sprain, but the pain got worse. That’s why my coach brought me here."
 
-    hide patient happy
-    show patient happy at sycamore_small, left
+    hide patient happy looking
+    show patient happy looking at sycamore_small, left
 
     you "Don’t worry — we’ll get you fixed up in no time. You’ll be back on the field soon enough!"
 
-    hide patient happy
-    show patient happy talk at sycamore_small, left
+    hide patient happy looking
+    show patient happy talk looking at sycamore_small, left
 
     patient "Thank you so much, Doc! I trust you completely."
 
-    hide patient happy
-    show patient happy at sycamore_small, left
+    hide patient happy looking
+    show patient happy looking at sycamore_small, left
 
     you "You're welcome, Steven. First, I need to gather a few details, then we’ll get you into the diagnostic room."
 
     you "What’s your full name, your age, and who’s your guardian?"
 
-    hide patient happy
-    show patient happy talk at sycamore_small, left
+    hide patient happy looking
+    show patient happy talk looking at sycamore_small, left
 
     patient "My name is Steven Nicholas. I'm 18, and my dad is my coach. He can help with the rest if needed."
 
-    hide patient happy
-    show patient happy at sycamore_small, left
+    hide patient happy looking
+    show patient happy looking at sycamore_small, left
 
     you "Perfect. Thanks, Steven. Let’s head to diagnostics and run some tests."
 
@@ -310,42 +319,42 @@ label answer_confident_scene_1:
             jump answer_anxious_scene_2
 
 label answer_confident_scene_2:
-    show patient happy at sycamore_small, left
+    show patient happy looking at sycamore_small, left
     "You place a hand gently on Steven’s leg and begin the examination."
     "He flinches slightly as you press around the joint, but your calm presence seems to help."
-    hide patient happy
-    show patient happy talk at sycamore_small, left
+    hide patient happy looking
+    show patient happy talk looking at sycamore_small, left
     patient "Alright, Doctor. I’ll let you know if anything feels painful."
-    hide patient happy talk
-    show patient neutral at sycamore_small, left
+    hide patient happy talk looking
+    show patient neutral looking at sycamore_small, left
     "He watches you with growing trust."
     "You finish the physical assessment and wheel in the portable X-ray machine."
     jump diagnosis_result
 
 label answer_neutral_scene_2:
-    show patient sad at sycamore_small, left
+    show patient sad looking at sycamore_small, left
     "You begin examining the leg, then prepare the X-ray plates."
     "Steven doesn’t say much but watches you with unease."
-    hide patient sad
-    show patient sad talk at sycamore_small, left
+    hide patient sad looking
+    show patient sad talk looking at sycamore_small, left
     patient "Okay... if you say so. I just hope it's not too bad."
 
-    hide patient sad talk
+    hide patient sad talk looking
 
-    show patient neutral at sycamore_small, left
+    show patient neutral looking at sycamore_small, left
     "You nod and proceed with the imaging process, noting his guarded body language."
     jump diagnosis_result
 
 label answer_anxious_scene_2:
-    show patient teary at sycamore_small, left
+    show patient teary looking at sycamore_small, left
     "You move efficiently but offer no clear context for the tests."
     "Steven tenses up and glances at the door."
-    hide patient teary
-    show patient teary talk at sycamore_small, left
+    hide patient teary looking
+    show patient teary talk looking at sycamore_small, left
     patient "Wait... what kind of tests? Is it serious?"
     "He grips the edge of the bed tightly, clearly unnerved by your tone."
 
-    hide patient teary talk
+    hide patient teary talk looking
     "You silently position the X-ray machine and begin the scan."
     jump diagnosis_result
 
@@ -366,18 +375,18 @@ label answer_anxious_scene_2:
             jump answer_anxious_scene_3
 
 label answer_confident_scene_3:
-    show patient happy at sycamore_small, left
+    show patient happy looking at sycamore_small, left
     "You pull up a stool beside him and gently show the X-ray results."
     "Your voice is calm and steady as you explain the injury and the next steps clearly."
     
-    hide patient happy
-    show patient happy talk at sycamore_small, left
+    hide patient happy looking
+    show patient happy talk looking at sycamore_small, left
     patient "Thank you, Doctor. I was really nervous, but the way you explain it makes it feel manageable."
     
     "He smiles weakly, but you can see the relief in his eyes."
     
-    hide patient happy
-    show patient neutral at sycamore_small, left
+    hide patient happy looking
+    show patient neutral looking at sycamore_small, left
     
     "You nod and begin discussing the surgery preparation."
     
@@ -410,17 +419,17 @@ label answer_confident_scene_3:
 
 
 label answer_neutral_scene_3:
-    show patient sad at sycamore_small, left
+    show patient sad looking at sycamore_small, left
     "You stand beside the monitor, pointing out the fracture without much emotion."
     "Steven blinks a few times and slowly nods."
     
-    hide patient sad
-    show patient sad talk at sycamore_small, left
+    hide patient sad looking
+    show patient sad talk looking at sycamore_small, left
     
     patient "Okay... I guess if it’s necessary. Just tell me what I need to do."
     
-    hide patient sad talk
-    show patient sad at sycamore_small, left
+    hide patient sad talk looking
+    show patient sad looking at sycamore_small, left
     "He glances at the X-ray again, still looking worried."
     
     "You hand him a consent form and explain the next steps."
@@ -446,10 +455,10 @@ label answer_neutral_scene_3:
 
 
 label answer_anxious_scene_3:
-    show patient teary at sycamore_small, left
+    show patient teary looking at sycamore_small, left
     "You casually toss the X-ray onto the nearby table and shrug."
-    hide patient teary
-    show patient teary talk at sycamore_small, left
+    hide patient teary looking
+    show patient teary talk looking at sycamore_small, left
     patient "Wait, what?! Surgery?! That sounds really serious..."
 
     "His breathing grows shallow, panic creeping into his expression."
@@ -466,7 +475,7 @@ label answer_anxious_scene_3:
         "You have finished preparing the operating room and notified the patient to proceed to the the room."
 
         with fade
-        show patient teary at sycamore_small, left
+        show patient teary looking at sycamore_small, left
         patient "Alright, Doctor, we're ready to proceed with the surgery."
         
         you "Alright you can start changing clothes on the dressing room."
@@ -477,7 +486,7 @@ label answer_anxious_scene_3:
         "You begin the surgery on the kneecap fracture."
 
     # Step 1
-    hide patient teary
+    hide patient teary looking
     scene green_background at operating_default
     with fade
 

@@ -149,6 +149,7 @@ style namebox:
 
 style say_label:
     properties gui.text_properties("name", accent=True)
+    outlines [(3, "#181313", 0, 0)]
     xalign gui.name_xalign
     yalign 0.5
 
@@ -339,7 +340,9 @@ style navigation_button:
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
     xalign 0.5
-    color "#5e0000"
+    color "#1d3bc3"
+    hover_color "#60acf4"
+    outlines [(3, "#ffffff", 0, 0)]
 
 
 ## Main Menu screen ############################################################
@@ -527,8 +530,7 @@ style game_menu_label:
 
 style game_menu_label_text:
     size gui.title_text_size
-    color "#ffffff"
-    hover_color "#ffffff"
+    color "#0066cc"
     yalign 0.5
 
 style return_button:
