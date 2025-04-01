@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 88: expected '=' not found.
-    default points 
-                   ^
+File "game/script.rpy", line 764: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Wed Apr  2 01:14:13 2025
+Wed Apr  2 03:47:15 2025
