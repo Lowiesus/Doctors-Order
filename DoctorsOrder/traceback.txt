@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 7, in script
-    define announcer = Character("Announcer", who_you = )
-  File "game/script.rpy", line 7, in <module>
-    define announcer = Character("Announcer", who_you = )
-NameError: name 'who_you' is not defined
+  File "game/script.rpy", line 634, in script
+    show knee stitched at knee_single
+Exception: Image 'knee' does not accept attributes 'stitched'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 7, in script
-    define announcer = Character("Announcer", who_you = )
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 2248, in execute
-    self.set()
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 2262, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 7, in <module>
-    define announcer = Character("Announcer", who_you = )
-NameError: name 'who_you' is not defined
+  File "game/script.rpy", line 634, in script
+    show knee stitched at knee_single
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'knee' does not accept attributes 'stitched'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
  
-Tue Apr  1 00:27:38 2025
+Wed Apr  2 01:02:01 2025

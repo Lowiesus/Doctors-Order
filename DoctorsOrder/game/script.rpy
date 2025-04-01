@@ -179,10 +179,18 @@ label patient_arrival:
     menu:
         "How do you approach the patient?"
         "Hi, my name is Doctor Jest. You’re in good hands — we’ll do our best to take care of you. Can you tell me what happened to your knee? Have you had any previous medical treatments we should know about?":
+            #Correct answer
+            #+1 Trust
+            #+0 Confidence
             jump answer_confident_scene_1
         "What happened to your knee?":
+            #Neutral Answer
+            #+1 Trust
+            #+0 Confidence
             jump answer_neutral_scene_1
         "Ermm... your knee looks bad. What happened?":
+            #-1 Trust
+            #-1 Confidence
             jump answer_anxious_scene_1
 
 label answer_anxious_scene_1:
@@ -623,7 +631,7 @@ label step8:
 # Step 9
 label step9:
     hide knee bracket
-    show knee stitched at knee_single
+    show knee betadine at knee_single
     "Step 9: What’s next?"
     menu:
         "Choose the correct action:"
@@ -638,7 +646,7 @@ label step9:
 
 # Step 10
 label step10:
-    hide knee stitched
+    hide knee betadine
     show knee betadine at knee_single
     "Step 10: What’s next?"
     menu:
