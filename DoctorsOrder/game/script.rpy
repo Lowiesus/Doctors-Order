@@ -84,6 +84,9 @@ transform knee_single:
     xalign 0.5
     yalign 0.5
 
+#Variable goes here
+default points = 0
+
 # The game starts here.
 
 label start:

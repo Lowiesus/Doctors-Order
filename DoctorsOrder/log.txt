@@ -90,3 +90,1598 @@ Maximum texture size: 4096x4096
 controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
 Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 467.62s
+Loading error handling took 0.06s
+Loading script took 0.46s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.90s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 469.98s
+Loading error handling took 0.03s
+Loading script took 0.75s
+Loading save slot metadata took 0.11s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.16s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.24s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.69s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 473.56s
+Loading error handling took 0.03s
+Loading script took 0.43s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.32s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.73s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 483.85s
+Loading error handling took 0.05s
+Loading script took 0.49s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.17s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.74s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 488.07s
+Loading error handling took 0.05s
+Loading script took 0.33s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Dump and make backups took 0.18s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.06s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.60s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 490.00s
+Loading error handling took 0.04s
+Loading script took 0.50s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.53s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 498.36s
+Loading error handling took 0.04s
+Loading script took 0.37s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.57s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 517.75s
+Loading error handling took 0.05s
+Loading script took 0.63s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.16s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.14s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.58s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 521.95s
+Loading error handling took 0.04s
+Loading script took 0.54s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.19s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.62s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 533.80s
+Loading error handling took 0.06s
+Loading script took 0.58s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.13s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.32s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.77s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 538.75s
+Loading error handling took 0.04s
+Loading script took 0.55s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.15s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.59s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 540.85s
+Loading error handling took 0.03s
+Loading script took 0.45s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.76s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 544.76s
+Loading error handling took 0.05s
+Loading script took 0.41s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.73s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 548.56s
+Loading error handling took 0.04s
+Loading script took 0.41s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.10s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.59s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 552.20s
+Loading error handling took 0.04s
+Loading script took 0.41s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.16s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.55s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 555.91s
+Loading error handling took 0.03s
+Loading script took 0.44s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.21s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.67s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 558.11s
+Loading error handling took 0.04s
+Loading script took 0.41s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.17s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.07s
+Save screen analysis took 0.21s
+Prepare screens took 0.22s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.71s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 563.83s
+Loading error handling took 0.04s
+Loading script took 0.44s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.60s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 573.64s
+Loading error handling took 0.05s
+Loading script took 0.46s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.85s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 577.83s
+Loading error handling took 0.04s
+Loading script took 0.47s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.15s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.17s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.74s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 580.06s
+Loading error handling took 0.03s
+Loading script took 0.46s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.76s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 585.60s
+Loading error handling took 0.05s
+Loading script took 0.67s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.56s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 634, in script
+    show knee stitched at knee_single
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'knee' does not accept attributes 'stitched'.
+
+While running game code:
+  File "game/script.rpy", line 634, in script
+    show knee stitched at knee_single
+Exception: Image 'knee' does not accept attributes 'stitched'.
+Resetting cache.
+Early init took 811.83s
+Loading error handling took 0.05s
+Loading script took 0.66s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.61s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 820.55s
+Loading error handling took 0.04s
+Loading script took 0.40s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.67s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 824.29s
+Loading error handling took 0.03s
+Loading script took 0.42s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.54s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 826.28s
+Loading error handling took 0.04s
+Loading script took 0.56s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.15s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.27s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.61s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 828.61s
+Loading error handling took 0.04s
+Loading script took 0.42s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.22s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.06s
+Save screen analysis took 0.03s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.67s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 834.24s
+Loading error handling took 0.04s
+Loading script took 0.41s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.73s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1453.78s
+Loading error handling took 0.05s
+Loading script took 0.66s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.10s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.61s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1460.91s
+Loading error handling took 0.04s
+Loading script took 0.48s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+Running init code took 0.12s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.58s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1464.65s
+Loading error handling took 0.04s
+Loading script took 0.48s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.47s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 1466.65s
+Loading error handling took 0.04s
+Loading script took 0.33s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 88: expected 'word' not found.
+    default 
+            ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1482.00s
+Loading error handling took 0.04s
+Loading script took 0.33s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 88: expected '=' not found.
+    default points 
+                   ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1485.22s
+Loading error handling took 0.03s
+Loading script took 0.43s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.09s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.50s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 1487.14s
+Loading error handling took 0.11s
+Loading script took 0.46s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.02s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.52s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Resetting cache.
+Early init took 1489.01s
+Loading error handling took 0.03s
+Loading script took 0.38s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Lowie Suarez\\AppData\\Roaming/RenPy/backups\\DoctorsOrder':
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.55s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096
+controller: '030000005e0400008e02000000007200' 'Xbox 360 Controller' 1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1027) drawable=(1920, 1027)
+Maximum texture size: 4096x4096

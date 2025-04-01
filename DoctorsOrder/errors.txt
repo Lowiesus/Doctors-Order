@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 383: end of line expected.
-    show patient happy talk lookingat sycamore_small, left
-                                                    ^
+File "game/script.rpy", line 88: expected '=' not found.
+    default points 
+                   ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Apr  1 00:42:01 2025
+Wed Apr  2 01:14:13 2025
