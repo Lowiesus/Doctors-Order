@@ -735,14 +735,6 @@ label step10:
     # Scene 5: Monitoring Recovery
     label recovery:
     scene emergency at emergency_default
-
-    stop music fadeout 1.0
-    play audio "yay.mp3"
-
-    stop music fadeout 1.0
-
-    play music "background music.mp3" volume 0.1
-
     "You completed the surgery successfully."
 
     "You approach the patient to inform them on how the surgery went."
@@ -755,23 +747,55 @@ label step10:
             pause 1
             hide overlay positive answer with dissolve
 
+            show patient happy look talk at sycamore_small
             patient "Oh, thank you so much, doctor! I was really worried, but this is such a relief."
             patient "When can I start physical therapy? I want to recover as soon as possible."
+            hide patient happy look talk
+            show patient happy look at sycamore_small
 
             "You smile reassuringly."
 
-            you "Well, before we even start therapy, we'll be monitoring your condition for a while."
-            you "We need to make sure your knee is healing properly before putting too much strain on it."
+            you "Before we start therapy, we need to monitor your condition and ensure your knee is healing properly."
+            you "For now, it's important to keep your leg elevated to reduce swelling and avoid putting weight on it."
+
+            hide patient happy look
+            show patient happy look talk at sycamore_small
 
             patient "That makes sense. How long will the monitoring last?"
 
-            you "It depends on how your body responds, but usually, within a few days, we can start with some light movement exercises."
-            you "After that, we’ll gradually increase the intensity based on your progress."
+            hide patient happy look talk
+            show patient happy look at sycamore_small
+            you "It depends on your healing progress, but within a few days, we can start light movement exercises."
+            you "Once the swelling reduces and we confirm proper healing, we’ll gradually increase activity."
+            
+            hide patient happy look
+            show patient happy look talk at sycamore_small
 
-            patient "Alright, I’ll make sure to follow all the instructions. I just really want to get back to normal as soon as possible."
+            patient "Alright, I’ll follow all the instructions. What else should I do to take care of my knee?"
 
-            you "That’s the right attitude. Stick to the plan, and you’ll be walking pain-free in no time."
+            hide patient happy look talk
+            show patient neutral look at sycamore_small
+            you "Here are some key things to remember:"
+            you "1. Keep your leg elevated above heart level, especially in the first few days."
+            you "2. Apply ice packs for 15-20 minutes every few hours to minimize swelling."
+            you "3. Take your prescribed pain medications as directed to manage discomfort."
+            you "4. Avoid putting weight on your leg until your physical therapist clears you."
+            you "5. Perform any recommended gentle exercises to prevent stiffness."
 
+            hide patient happy look
+            show patient happy look talk at sycamore_small
+            patient "Got it! And when will I be able to walk normally again?"
+
+            hide patient happy look talk
+            show patient neutral look at sycamore_small
+            you "That depends on how well your body heals, but with consistent therapy, most patients regain full mobility within a few months."
+
+            hide patient neutral look
+            show patient happy look talk at sycamore_small
+            patient "Alright, I’ll do my best to stick to the recovery plan. Thank you, doctor!"
+
+            hide patient happy look talk
+            show patient happy look at sycamore_small
             "The patient nods, looking relieved and motivated to begin their recovery journey."
 
             jump maintenance
@@ -782,21 +806,42 @@ label step10:
             show overlay neutral answer at overlay with dissolve
             pause 1
             hide overlay neutral answer with dissolve
-
+            
+            show patient neutral look at sycamore_small
             "The patient looks at you with a confused expression."
 
             patient "Oh… okay. I mean, that’s good to hear, but could you clarify what you mean by ‘partially unable to walk’?"
-            
-            you "Apologies for the vague wording. Your knee is stable, but you’ll need time to regain full strength."
-            you "You’ll have some mobility restrictions initially, but with physical therapy, you should recover well."
 
-            patient "I see. I was just hoping to hear more specifics, but I appreciate the reassurance."
+            you "I mean that you’ll need crutches or a walker at first, and you should avoid putting full weight on your leg."
+            you "Your mobility will be limited for a while, but physical therapy will help you regain full function."
 
-            you "I’ll go over the recovery plan in detail so you know exactly what to expect."
+            hide patient neutral look
+            show patient neutral look talk at sycamore_small
+            patient "I see. What do I need to do in the meantime to take care of my knee?"
 
-            patient "That would help a lot, thank you."
+            hide patient neutral look talk 
+            show patient neutral look at sycamore_small
 
-            "Though initially confused, the patient seems more at ease after your clarification."
+            you "It’s important to keep your leg elevated and apply ice to reduce swelling."
+            you "You’ll also need to wear a brace or a splint to protect the joint and avoid sudden movements."
+            you "Most importantly, don’t try to walk without assistance until we confirm that your knee is strong enough."
+
+            hide patient neutral look
+            show patient neutral talk at sycamore_small
+            patient "Okay, that’s good to know. How will I know if something is wrong with my knee?"
+
+            hide patient neutral look talk
+            show patient neutral look at sycamore_small
+            you "Watch out for signs of complications, like increased swelling, severe pain, warmth, or redness."
+            you "If you experience any of these symptoms, or if your leg feels numb, let us know immediately."
+
+            hide patient neutral look
+            show patient neutral look talk at sycamore_small
+            patient "Alright, I’ll be careful and follow all the instructions. Thanks, doctor."
+
+            hide patient neutral look talk
+            show patient neutral look at sycamore_small
+            "The patient still seems a bit uncertain but appreciates the clarification."
 
             jump maintenance
 
@@ -807,13 +852,20 @@ label step10:
             pause 1
             hide overlay negative answer with dissolve
 
+            show patient terrified look at sycamore_small
             patient "Wait… that’s it? I just had surgery, and now I’m being sent home?"
             patient "Are you sure it’s safe for me to leave already?"
+            
+            you "Actually, that was a mistake. You’re not ready for discharge yet."
+            you "We need to monitor your recovery and make sure you understand how to take care of your knee before you go home."
 
-            you "Actually, no, you're not ready for discharge yet. I should have been clearer."
-            you "You'll need monitoring and physical therapy before you can safely go home."
+            patient "Oh… okay. That makes more sense. What should I be doing to recover properly?"
 
-            patient "Oh… okay. That makes more sense. Please make sure to explain things better next time."
+            you "For now, focus on keeping your leg elevated, using ice to reduce swelling, and avoiding putting weight on it."
+            you "We’ll also provide a brace or splint for support and start gentle exercises once it’s safe."
+            you "I’ll also prescribe medication to manage pain and prevent blood clots."
+
+            patient "That sounds more like what I expected. Thanks for explaining."
 
             "The patient looks slightly annoyed but relieved that they aren’t being sent home prematurely."
 
@@ -821,23 +873,7 @@ label step10:
 
     # Scene 6: Maintenance
     label maintenance:
-        scene discharge_room
-        "You’re about to discharge the patient. Give final instructions."
-
-        menu:
-            "Before discharge..."
-            "Before I discharge you, here are some friendly reminders...":
-                "You give a detailed explanation of the medication and activities to avoid."
-                "The patient smiles, feeling cared for."
-                jump ending
-            "Don’t do any heavy work and take your medications.":
-                "The patient nods, unsure of the details."
-                jump ending
-            "You’ve been discharged, you can leave now.":
-                "The patient leaves without knowing the full care routine."
-
-    label ending:
-        scene black
-        "Thank you for playing Doctor's Order: Emergency Room Edition!"
+    scene discharge_room
+    "last scene is you talk to sycamore about your performance"
 
     return
