@@ -1,24 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 53, in script
-    image knee closed = ""
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 744, in script
+    play music "background music.mp3" volume
+  File "renpy/common/000statements.rpy", line 130, in execute_play_music
+    relative_volume=eval(p.get("volume", "1.0")))
+TypeError: eval() arg 1 must be a string, bytes or code object
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 53, in script
-    image knee closed = ""
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\ast.py", line 937, in execute
-    renpy.exports.image(self.imgname, img)
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 73, in image
-    d = renpy.easy.displayable(d)
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\easy.py", line 117, in displayable
-    raise Exception("An empty string cannot be used as a displayable.")
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 744, in script
+    play music "background music.mp3" volume
+  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\ast.py", line 1987, in execute
+    self.call("execute")
+  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\ast.py", line 1966, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 130, in execute_play_music
+    relative_volume=eval(p.get("volume", "1.0")))
+  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+TypeError: eval() arg 1 must be a string, bytes or code object
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.7.25031702
  
-Thu Apr  3 14:52:25 2025
+Thu Apr  3 15:16:23 2025

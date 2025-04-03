@@ -734,56 +734,90 @@ label step10:
 
     # Scene 5: Monitoring Recovery
     label recovery:
-        scene emergency at emergency_default
-        "You completed the surgery successfully."
+    scene emergency at emergency_default
 
-        "You apprroach the patient to inform them on how the surgery went."
-        menu:
-            "How do you inform the patient?"
-            "Good news! The surgery was a success! I’ll prescribe meds and schedule physical therapy.":
-                $ trust_points += 1
-                $ confidence_points += 1
-                show overlay positive answer at overlay with dissolve
-                pause 1
-                hide overlay positive answer with dissolve
+    stop music fadeout 1.0
+    play audio "yay.mp3"
 
-                patient "Oh, thank you so much, doctor! I was really worried, but this is such a relief."
-                patient "When can I start physical therapy? I want to recover as soon as possible."
+    stop music fadeout 1.0
 
-                "You smile reassuringly."
+    play music "background music.mp3" volume 0.1
 
-                you "Well, before we even start therapy, we'll be monitoring your condition for a while."
-                you "We need to make sure your knee is healing properly before putting too much strain on it."
+    "You completed the surgery successfully."
 
-                patient "That makes sense. How long will the monitoring last?"
+    "You approach the patient to inform them on how the surgery went."
+    menu:
+        "How do you inform the patient?"
+        "Good news! The surgery was a success! I’ll prescribe meds and schedule physical therapy.":
+            $ trust_points += 1
+            $ confidence_points += 1
+            show overlay positive answer at overlay with dissolve
+            pause 1
+            hide overlay positive answer with dissolve
 
-                you "It depends on how your body responds, but usually, within a few days, we can start with some light movement exercises."
-                you "After that, we’ll gradually increase the intensity based on your progress."
+            patient "Oh, thank you so much, doctor! I was really worried, but this is such a relief."
+            patient "When can I start physical therapy? I want to recover as soon as possible."
 
-                patient "Alright, I’ll make sure to follow all the instructions. I just really want to get back to normal as soon as possible."
+            "You smile reassuringly."
 
-                you "That’s the right attitude. Stick to the plan, and you’ll be walking pain-free in no time."
+            you "Well, before we even start therapy, we'll be monitoring your condition for a while."
+            you "We need to make sure your knee is healing properly before putting too much strain on it."
 
-                "The patient nods, looking relieved and motivated to begin their recovery journey."
+            patient "That makes sense. How long will the monitoring last?"
 
-                jump maintenance
+            you "It depends on how your body responds, but usually, within a few days, we can start with some light movement exercises."
+            you "After that, we’ll gradually increase the intensity based on your progress."
 
-            "We fixed your knee, you’ll only partially be unable to walk.":
-                $ trust_points += 1
-                $ confidence_points += 0
-                show overlay neutral answer at overlay with dissolve
-                pause 1
-                hide overlay neutral answer with dissolve
-                patient "neutral answer"
-                jump maintenance
-            "I will be discharging you now.":
-                $ trust_points += 0
-                $ confidence_points += 0
-                show overlay negative answer at overlay with dissolve
-                pause 1
-                hide overlay negative answer with dissolve
-                patient "negative answer"
-                jump maintenance
+            patient "Alright, I’ll make sure to follow all the instructions. I just really want to get back to normal as soon as possible."
+
+            you "That’s the right attitude. Stick to the plan, and you’ll be walking pain-free in no time."
+
+            "The patient nods, looking relieved and motivated to begin their recovery journey."
+
+            jump maintenance
+
+        "We fixed your knee, you’ll only partially be unable to walk.":
+            $ trust_points += 1
+            $ confidence_points += 0
+            show overlay neutral answer at overlay with dissolve
+            pause 1
+            hide overlay neutral answer with dissolve
+
+            "The patient looks at you with a confused expression."
+
+            patient "Oh… okay. I mean, that’s good to hear, but could you clarify what you mean by ‘partially unable to walk’?"
+            
+            you "Apologies for the vague wording. Your knee is stable, but you’ll need time to regain full strength."
+            you "You’ll have some mobility restrictions initially, but with physical therapy, you should recover well."
+
+            patient "I see. I was just hoping to hear more specifics, but I appreciate the reassurance."
+
+            you "I’ll go over the recovery plan in detail so you know exactly what to expect."
+
+            patient "That would help a lot, thank you."
+
+            "Though initially confused, the patient seems more at ease after your clarification."
+
+            jump maintenance
+
+        "I will be discharging you now.":
+            $ trust_points += 0
+            $ confidence_points += 0
+            show overlay negative answer at overlay with dissolve
+            pause 1
+            hide overlay negative answer with dissolve
+
+            patient "Wait… that’s it? I just had surgery, and now I’m being sent home?"
+            patient "Are you sure it’s safe for me to leave already?"
+
+            you "Actually, no, you're not ready for discharge yet. I should have been clearer."
+            you "You'll need monitoring and physical therapy before you can safely go home."
+
+            patient "Oh… okay. That makes more sense. Please make sure to explain things better next time."
+
+            "The patient looks slightly annoyed but relieved that they aren’t being sent home prematurely."
+
+            jump maintenance
 
     # Scene 6: Maintenance
     label maintenance:

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 746: expected 'simple_expression' not found.
-    show overlay positive answer at with dissolve
-                                    ^
+File "game/script.rpy", line 744: play requires a file
+    play music 
+               ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Apr  3 14:57:18 2025
+Thu Apr  3 15:15:40 2025
