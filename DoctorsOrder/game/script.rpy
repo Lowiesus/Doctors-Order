@@ -55,7 +55,7 @@ image knee stitched = "knee stitched.png"
 
 
 # background images scenes
-image clinic = "clinic.jpg"
+image clinic = "clinic.png"
 image emergency = "emergency.png"
 image hospital = "hospital.png"
 image office = "office.jpg"
