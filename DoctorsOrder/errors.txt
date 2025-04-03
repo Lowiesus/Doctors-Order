@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 899: end of line expected.
-    show doctor happy at sycamore_small.with dissolve
-                                             ^
+File "game/script.rpy", line 119: expected '=' not found.
+    default health_points 
+                          ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Apr  3 20:45:06 2025
+Fri Apr  4 01:20:46 2025

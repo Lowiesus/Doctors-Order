@@ -1,32 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 899, in script
-    show doctor happy at sycamore_small, middle with dissolve
-  File "game/script.rpy", line 899, in <module>
-    show doctor happy at sycamore_small, middle with dissolve
-NameError: name 'middle' is not defined
+  File "game/script.rpy", line 58, in script
+    image knee clamps = ""
+Exception: An empty string cannot be used as a displayable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 899, in script
-    show doctor happy at sycamore_small, middle with dissolve
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\User1\Downloads\renpy-8.3.7-sdk\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 899, in <module>
-    show doctor happy at sycamore_small, middle with dissolve
-NameError: name 'middle' is not defined
+  File "game/script.rpy", line 58, in script
+    image knee clamps = ""
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 937, in execute
+    renpy.exports.image(self.imgname, img)
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 73, in image
+    d = renpy.easy.displayable(d)
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\easy.py", line 117, in displayable
+    raise Exception("An empty string cannot be used as a displayable.")
+Exception: An empty string cannot be used as a displayable.
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
  
-Thu Apr  3 20:45:23 2025
+Fri Apr  4 01:11:38 2025
