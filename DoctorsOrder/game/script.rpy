@@ -871,7 +871,7 @@ label step10:
 
             jump maintenance
 
-    #POTANIGANWIDNAWIDNAUIWNDUIAWNUDIANSIUDNAISUNDUAISNbru
+    #POTANIGANWIDNAWIDNAUIWNDUIAWNUDIANSIUDNAISUNDUAISNbrudwasdwasd
     # Scene 6: Maintenance
     label maintenance:
     scene discharge_room
