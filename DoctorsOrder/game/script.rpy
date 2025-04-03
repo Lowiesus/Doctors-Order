@@ -65,6 +65,10 @@ image emergency = "emergency.png"
 image hospital = "hospital.png"
 image office = "office.jpg"
 image operating table = "green_background.jpg"
+image good ending = "good ending.png"
+image neutral ending = "neutral ending.png"
+image bad ending = "bad ending.png"
+image black screen = "black_screen.jpg"
 
 
 # Transformations for doctor images
@@ -116,7 +120,8 @@ transform overlay:
 #Variable goes here
 default trust_points = 0
 default confidence_points = 0
-default health_points = 0
+default health_points = 5
+default mistake_points = 0
 
 # The game starts here.
 
@@ -595,7 +600,7 @@ label answer_anxious_scene_3:
         "You have finished preparing the operating room and notified the patient to proceed to the the room."
 
         with fade
-        show patient teary looking at sycamore_small, left
+        show patient teary look at sycamore_small, left
         patient "Alright, Doctor, we're ready to proceed with the surgery."
         
         you "Alright you can start changing clothes on the dressing room."
@@ -605,109 +610,148 @@ label answer_anxious_scene_3:
 
         "You begin the surgery on the kneecap fracture."
 
-    # Step 1
-    hide patient teary looking
-    scene green_background at operating_default
-    with fade
-
-    show knee at knee_default
     label step1:
-        hide knee
-        show knee at knee_single_default
-        "Step 1: Preparing the knee"
-        
-        menu:
-            "Choose the correct action:"
-            "Sterilize the knee using antiseptic.":
-                doctor_sycamore "We need to mark the incision first."
-                jump step1
-            "Mark the knee for the incision.":
-                jump step2
-            "Cut the skin of the knee.":
-                doctor_sycamore "That’s too early! The area isn’t even sterile."
-                jump step1
+    hide patient teary look
+    scene green_background at operating_default
 
-    # Step 2
-    label step2:
-        hide knee
-        show knee dash line at knee_single with dissolve
-        "Step 2: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Sanitize the knee with betadine.":
-                jump step3
-            "Tap the knee with a hammer":
-                doctor_sycamore "That’s not appropriate!"
-                jump step2
-            "Cut the skin of the knee":
-                doctor_sycamore "Sanitizing is required before cutting."
-                jump step2
+    with fade
+    show knee at knee_single_default
+    "Step 1: Preparing the knee"
 
-    # Step 3
-    label step3:
-        hide knee dash line
-        show knee betadine at knee_single with dissolve
-        "Step 3: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Apply anesthesia":
-                jump step4
-            "Bend the knee":
-                doctor_sycamore "That’s unnecessary here."
-                jump step3
-            "Apply for college":
-                doctor_sycamore "Now’s not the time for that!"
-                jump step3
+    menu:
+        "Choose the correct action:"
+        "Sterilize the knee using antiseptic.":
+            doctor_sycamore "We need to mark the incision first."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step1
+        "Mark the knee for the incision.":
+            jump step2
+        "Cut the skin of the knee.":
+            doctor_sycamore "That’s too early! The area isn’t even sterile."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step1
 
-    # Step 4
-    label step4:
-        hide knee dash line
-        show knee inject at knee_single with dissolve
-        "Step 4: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Put an incision where the mark is":
-                jump step5
-            "Put an incision next the mark":
-                doctor_sycamore "You must be precise."
-                jump step4
-            "Put an incision above the mark":
-                doctor_sycamore "Not accurate!"
-                jump step4
+label step2:
+    hide knee
+    show knee dash line at knee_single with dissolve
+    "Step 2: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Sanitize the knee with betadine.":
+            jump step3
+        "Tap the knee with a hammer":
+            doctor_sycamore "That’s not appropriate!"
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step2
+        "Cut the skin of the knee":
+            doctor_sycamore "Sanitizing is required before cutting."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step2
 
-    # Step 5
-    label step5:
-        hide knee inject
-        show knee open at knee_single with dissolve
-        "Step 5: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Use surgical clamps to hold the skin.":
-                jump step6
-            "Hit the bone with a hammer.":
-                doctor_sycamore "That would be very harmful."
-                jump step5
-            "Use the saw to remove the fractured bone.":
-                doctor_sycamore "Too early to do this."
-                jump step5
+label step3:
+    hide knee dash line
+    show knee betadine at knee_single with dissolve
+    "Step 3: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Apply anesthesia":
+            jump step4
+        "Bend the knee":
+            doctor_sycamore "That’s unnecessary here."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step3
+        "Apply for college":
+            doctor_sycamore "Now’s not the time for that!"
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step3
 
-    # Step 6
-    label step6:
-        hide knee open
-        show knee clamps at knee_single with dissolve
-        "Step 6: What’s next?"
-        menu:
-            "Choose the correct action:"
-            "Use a drill to put holes on the bone where the screws, wires, metal plates will be placed.":
-                jump step7
-            "Close the wound with clamps and stitch it back closed.":
-                doctor_sycamore "You're not done yet!"
-                jump step6
-            "Remove the fractured bone and replace it with a prosthetic kneecap.":
-                doctor_sycamore "That's not needed in this case."
-                jump step6
+label step4:
+    hide knee dash line
+    show knee inject at knee_single with dissolve
+    "Step 4: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Put an incision where the mark is":
+            jump step5
+        "Put an incision next to the mark":
+            doctor_sycamore "You must be precise."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step4
+        "Put an incision above the mark":
+            doctor_sycamore "Not accurate!"
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step4
 
-    # Step 7
+label step5:
+    hide knee inject
+    show knee open at knee_single with dissolve
+    "Step 5: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Use surgical clamps to hold the skin.":
+            jump step6
+        "Hit the bone with a hammer.":
+            doctor_sycamore "That would be very harmful."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step5
+        "Use the saw to remove the fractured bone.":
+            doctor_sycamore "Too early to do this."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step5
+
+label step6:
+    hide knee open
+    show knee clamps at knee_single with dissolve
+    "Step 6: What’s next?"
+    menu:
+        "Choose the correct action:"
+        "Use a drill to put holes on the bone where the screws, wires, metal plates will be placed.":
+            jump step7
+        "Close the wound with clamps and stitch it back closed.":
+            doctor_sycamore "You're not done yet!"
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step6
+        "Remove the fractured bone and replace it with a prosthetic kneecap.":
+            doctor_sycamore "That's not needed in this case."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
+            jump step6
+
 label step7:
     hide knee clamps
     show knee hole at knee_single with dissolve
@@ -718,12 +762,19 @@ label step7:
             jump step8
         "Use prosthetic kneecaps to replace the fractured one.":
             doctor_sycamore "That’s not necessary for this injury."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step7
         "Use a hammer to break away the rest of the broken bones.":
             doctor_sycamore "No! That would worsen the injury."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step7
 
-# Step 8
 label step8:
     hide knee hole
     show knee bracket at knee_single with dissolve
@@ -734,12 +785,19 @@ label step8:
             jump step9
         "Hammer the metal plates and screws to make sure they’re sturdy.":
             doctor_sycamore "No need to hammer them in."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step8
         "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
             doctor_sycamore "It’s too late for that now."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step8
 
-# Step 9
 label step9:
     hide knee bracket
     show knee closed at knee_single with dissolve
@@ -750,12 +808,19 @@ label step9:
             jump step10
         "Hammer the metal plates and screws to make sure they’re sturdy.":
             doctor_sycamore "No need to hammer them in."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step9
         "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
             doctor_sycamore "It’s too late for that now."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step9
 
-# Step 10
 label step10:
     hide knee betadine
     show knee stitched at knee_single with dissolve
@@ -767,9 +832,17 @@ label step10:
             jump step11
         "Hammer the metal plates and screws to make sure they’re sturdy.":
             doctor_sycamore "No need to hammer them in."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step10
         "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
             doctor_sycamore "It’s too late for that now."
+            $ health_points -= 1
+            $ mistake_points + 1
+            if health_points <= 0:
+                jump surgery_failed
             jump step10
 
 label step11:
@@ -777,9 +850,18 @@ label step11:
     show knee bandaged at knee_single with dissolve
 
     doctor_sycamore "Well, that should do it!"
-    doctor_sycamore "Goodjob! We have successfully completed the surgery."
+    doctor_sycamore "Good job! We have successfully completed the surgery."
 
     jump recovery
+
+# Bad Ending if health reaches 0
+label surgery_failed:
+    scene black with fade
+    "You made too many mistakes during the surgery..."
+    "Unfortunately, the operation was unsuccessful."
+    "The patient’s condition worsened, leading to complications."
+    "Game Over."
+    return
 
     # Scene 5: Monitoring Recovery
     label recovery:
@@ -865,10 +947,10 @@ label step11:
             you "Your mobility will be limited for a while, but physical therapy will help you regain full function."
 
             hide patient neutral look
-            show patient neutral look talk at sycamore_small
+            show patient happy talk at sycamore_small
             patient "I see. What do I need to do in the meantime to take care of my knee?"
 
-            hide patient neutral look talk
+            hide patient happy talk talk
             show patient neutral look at sycamore_small
 
             you "It’s important to keep your leg elevated and apply ice to reduce swelling."
@@ -876,19 +958,19 @@ label step11:
             you "Most importantly, don’t try to walk without assistance until we confirm that your knee is strong enough."
 
             hide patient neutral look
-            show patient neutral talk at sycamore_small
+            show patient happy talk at sycamore_small
             patient "Okay, that’s good to know. How will I know if something is wrong with my knee?"
 
-            hide patient neutral look talk
+            hide patient happy look talk
             show patient neutral look at sycamore_small
             you "Watch out for signs of complications, like increased swelling, severe pain, warmth, or redness."
             you "If you experience any of these symptoms, or if your leg feels numb, let us know immediately."
 
             hide patient neutral look
-            show patient neutral look talk at sycamore_small
+            show patient happy look talk at sycamore_small
             patient "Alright, I’ll be careful and follow all the instructions. Thanks, doctor."
 
-            hide patient neutral look talk
+            hide patient happy look talk
             show patient neutral look at sycamore_small
             "The patient still seems a bit uncertain but appreciates the clarification."
 
@@ -924,24 +1006,29 @@ label step11:
             jump ending
 
     # Scene 6: Maintenance
-    label ending:
-            scene office at clinic_default
-            hide patient happy look
-            if trust_points >= 3:  # Good Ending (3/4 or 4/4 trust points)
+            label ending:
+                
+                hide patient happy look
+                show black screen
+                with fade
+
+            if mistake_points <= 2:  # Good Ending
                 jump good_ending
 
-            elif trust_points == 2:  # Neutral Ending (2/4 trust points)
+            elif 3 <= mistake_points <= 9:  # Neutral Ending
                 jump neutral_ending
 
-            else:  # Bad Ending (1/4 trust point)
+            else:  # Bad Ending (mistake_points >= 10)
                 jump bad_ending
 
             label good_ending:
-                scene office at clinic_default
+                
             "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
             "You knock on Doctor Sycamore's office door."
 
             doctor_sycamore "Come in!"
+
+            scene good ending with fade
 
             "You step inside, and Doctor Sycamore looks up from his paperwork, smiling."
 

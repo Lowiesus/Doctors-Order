@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 119: expected '=' not found.
-    default health_points 
-                          ^
+File "game/script.rpy", line 70: expected '=' not found.
+    image bad end
+                 ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Apr  4 01:20:46 2025
+Fri Apr  4 02:28:08 2025

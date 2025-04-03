@@ -1,24 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 58, in script
-    image knee clamps = ""
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 1011, in script
+    hide patient happy look
+Exception: Image 'black' does not accept attributes 'screen'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 58, in script
-    image knee clamps = ""
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 937, in execute
-    renpy.exports.image(self.imgname, img)
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 73, in image
-    d = renpy.easy.displayable(d)
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\easy.py", line 117, in displayable
-    raise Exception("An empty string cannot be used as a displayable.")
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 1011, in script
+    hide patient happy look
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'black' does not accept attributes 'screen'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
  
-Fri Apr  4 01:11:38 2025
+Fri Apr  4 02:32:14 2025
