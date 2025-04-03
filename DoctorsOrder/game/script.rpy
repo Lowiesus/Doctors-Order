@@ -886,7 +886,7 @@ label step10:
 
             else:  # Bad Ending (1/4 trust point)
                 jump bad_ending
-#dwansudiasnui
+#dwansudiasnuibdwabyusd
             label good_ending:
                 scene office at clinic_default
             "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
