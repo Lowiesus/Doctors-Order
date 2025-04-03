@@ -2,7 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-# mlem
+# mlemmers
 
 define doctor_sycamore = Character("Doctor Sycamore", who_color="#4fb6a7")
 define announcer = Character("Announcer", who_you = "#dff300")
