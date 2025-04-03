@@ -819,7 +819,7 @@ label step10:
             show patient neutral look talk at sycamore_small
             patient "I see. What do I need to do in the meantime to take care of my knee?"
 
-            hide patient neutral look talk 
+            hide patient neutral look talk
             show patient neutral look at sycamore_small
 
             you "It’s important to keep your leg elevated and apply ice to reduce swelling."
@@ -843,6 +843,9 @@ label step10:
             show patient neutral look at sycamore_small
             "The patient still seems a bit uncertain but appreciates the clarification."
 
+            you "Alright! That will be all. I will be seeing you soon for the general checkups."
+
+            patient "Thanks Doc! I'll see you soon!"
             jump maintenance
 
         "I will be discharging you now.":
@@ -875,6 +878,6 @@ label step10:
     # Scene 6: Maintenance
     label maintenance:
     scene discharge_room
-    "last scene is you talk to sycamore about your performance"
+    "last scene is you talk to sycamore talking about your performance"
 
     return
