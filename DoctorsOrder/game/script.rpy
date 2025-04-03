@@ -50,6 +50,8 @@ image knee open = "knee open.png"
 image knee hole = "knee hole.png"
 image knee bracket = "knee bone bracket.png"
 image knee dashline = "knee dash line.png"
+image knee closed = "knee closed.png"
+image knee stitched = "knee stitched.png"
 
 
 # background images scenes
@@ -92,7 +94,12 @@ transform knee_default:
     yalign 0.5
 
 transform knee_single:
-    zoom 0.8
+    zoom 1.0
+    xalign 0.5
+    yalign 0.5
+
+transform knee_single_default:
+    zoom 1.0
     xalign 0.5
     yalign 0.5
 
@@ -566,7 +573,7 @@ label answer_anxious_scene_3:
     show knee at knee_default
     label step1:
         hide knee
-        show knee focus at knee_single
+        show knee at knee_single_default
         "Step 1: Preparing the knee"
         
         menu:
@@ -583,11 +590,11 @@ label answer_anxious_scene_3:
     # Step 2
     label step2:
         hide knee
-        show knee dash line at knee_single
+        show knee dash line at knee_single with dissolve
         "Step 2: What’s next?"
         menu:
             "Choose the correct action:"
-            "Mark the knee for the incision":
+            "Sanitize the knee with betadine.":
                 jump step3
             "Tap the knee with a hammer":
                 "That’s not appropriate!"
@@ -599,7 +606,7 @@ label answer_anxious_scene_3:
     # Step 3
     label step3:
         hide knee dash line
-        show knee betadine at knee_single
+        show knee betadine at knee_single with dissolve
         "Step 3: What’s next?"
         menu:
             "Choose the correct action:"
@@ -615,7 +622,7 @@ label answer_anxious_scene_3:
     # Step 4
     label step4:
         hide knee dash line
-        show knee inject at knee_single
+        show knee inject at knee_single with dissolve
         "Step 4: What’s next?"
         menu:
             "Choose the correct action:"
@@ -631,7 +638,7 @@ label answer_anxious_scene_3:
     # Step 5
     label step5:
         hide knee inject
-        show knee open at knee_single
+        show knee open at knee_single with dissolve
         "Step 5: What’s next?"
         menu:
             "Choose the correct action:"
@@ -647,7 +654,7 @@ label answer_anxious_scene_3:
     # Step 6
     label step6:
         hide knee open
-        show knee open at knee_single
+        show knee open at knee_single with dissolve
         "Step 6: What’s next?"
         menu:
             "Choose the correct action:"
@@ -663,7 +670,7 @@ label answer_anxious_scene_3:
     # Step 7
 label step7:
     hide knee open
-    show knee hole at knee_single
+    show knee hole at knee_single with dissolve
     "Step 7: What’s next?"
     menu:
         "Choose the correct action:"
@@ -679,7 +686,7 @@ label step7:
 # Step 8
 label step8:
     hide knee hole
-    show knee bracket at knee_single
+    show knee bracket at knee_single with dissolve
     "Step 8: What’s next?"
     menu:
         "Choose the correct action:"
@@ -695,7 +702,7 @@ label step8:
 # Step 9
 label step9:
     hide knee bracket
-    show knee betadine at knee_single
+    show knee closed at knee_single with dissolve
     "Step 9: What’s next?"
     menu:
         "Choose the correct action:"
@@ -711,7 +718,7 @@ label step9:
 # Step 10
 label step10:
     hide knee betadine
-    show knee betadine at knee_single
+    show knee stitched at knee_single with dissolve
     "Step 10: What’s next?"
     menu:
         "Choose the correct action:"
@@ -736,9 +743,9 @@ label step10:
             "Good news! The surgery was a success! I’ll prescribe meds and schedule physical therapy.":
                 $ trust_points += 1
                 $ confidence_points += 1
-                show overlay_positive_answer with dissolve
+                show overlay positive answer at overlay with dissolve
                 pause 1
-                hide overlay_positive_answer with dissolve
+                hide overlay positive answer with dissolve
 
                 patient "Oh, thank you so much, doctor! I was really worried, but this is such a relief."
                 patient "When can I start physical therapy? I want to recover as soon as possible."
