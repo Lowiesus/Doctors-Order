@@ -1,28 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 7, in script
-    define announcer = Character("Announcer", who_you = )
-  File "game/script.rpy", line 7, in <module>
-    define announcer = Character("Announcer", who_you = )
-NameError: name 'who_you' is not defined
+  File "game/script.rpy", line 159, in script
+    show doctor happy at sycamore_left, right
+  File "game/script.rpy", line 159, in <module>
+    show doctor happy at sycamore_left, right
+NameError: name 'sycamore_left' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 7, in script
-    define announcer = Character("Announcer", who_you = )
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 2248, in execute
-    self.set()
-  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 2262, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "game/script.rpy", line 159, in script
+    show doctor happy at sycamore_left, right
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
+    return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Lowie Suarez\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 7, in <module>
-    define announcer = Character("Announcer", who_you = )
-NameError: name 'who_you' is not defined
+  File "game/script.rpy", line 159, in <module>
+    show doctor happy at sycamore_left, right
+NameError: name 'sycamore_left' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.7.25031702
  
-Tue Apr  1 00:27:38 2025
+Wed Apr  2 03:20:25 2025

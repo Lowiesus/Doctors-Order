@@ -9,7 +9,16 @@ define announcer = Character("Announcer", who_you = "#dff300")
 define patient = Character("Patient", who_color = "#c84b4b")
 define you = Character("You", who_color = "#ea0d7f")
 # image for doctor sycamoer
-image sycamore smiling = "doctor_sycamore.png"
+image doctor writing talk = "doctor writing talk.png"
+image doctor happy = "doctor happy.png"
+image doctor talk = "doctor talk.png"
+image doctor smile = "doctor smile.png"
+image doctor happy talk = "doctor happy talk.png"
+image doctor writing = "doctor writing.png"
+image doctor embarassed = "doctor embarassed.png"
+image doctor disappoint = "doctor disappoint.png"
+image doctor close = "doctor close.png"
+image doctor talking = "doctor talking.png"
 
 #image for the patient
 image patient neutral ="patient neutral.png"
@@ -28,6 +37,10 @@ image patient neutral talk looking = "patient neutral talklook .png"
 image patient happy talk looking = "patient happy talk look.png"
 image patient sad talk looking = "patient sad talk look.png"
 image patient teary talk looking = "patient teary talk look.png"
+
+image overlay positive answer = "8.png"
+image overlay neutral answer = "9.png"
+image overlay negative answer = "10.png"
 
 image knee = "knee.png"
 image knee focus = "knee focus.png"
@@ -48,7 +61,6 @@ image operating table = "green_background.jpg"
 
 
 # Transformations for doctor images
-
 transform sycamore_small:
     zoom 0.5
     xalign 1
@@ -84,6 +96,15 @@ transform knee_single:
     xalign 0.5
     yalign 0.5
 
+transform overlay:
+    zoom 0.2
+    xalign 1.0
+    yalign -0.0
+
+#Variable goes here
+default trust_points = 0
+default confidence_points = 0
+
 # The game starts here.
 
 label start:
@@ -104,7 +125,7 @@ label welcome_screen:
 
     play music "background music.mp3" volume 0.1
 
-    show sycamore smiling at sycamore_small, right
+    show doctor talk at sycamore_small, right
 
     # line 1
     doctor_sycamore "Welcome aboard, doc! I'm Doctor Sycamore, and I’ll be your guide through our protocols, ensuring that our response is always swift and effective."
@@ -115,21 +136,27 @@ label welcome_screen:
     # line 3
     doctor_sycamore "First, we’ll walk through some essential protocols. These will help us remain professional within the hospital and ensure our patients’ safety."
 
+    hide doctor talk
+    show doctor smile at sycamore_small, right
     # line 4
     doctor_sycamore "Let’s start with patient information."
-
+    hide doctor smile
+    show doctor happy talk  at sycamore_small, right
     # line 5
     doctor_sycamore "It’s our protocol to collect each patient’s personal details, strictly for medical purposes only."
 
     # line 6
     doctor_sycamore "Using someone’s personal information outside of the hospital is a serious offense. Always ensure this data stays within hospital use and strictly for healthcare needs."
-
+    hide doctor happy talk
+    show doctor talk at sycamore_small, right
     # line 7
     doctor_sycamore "Next, we need to check if the patient has had any prior medical procedures. Understanding their medical history helps us plan the most effective treatment."
 
     # line 8
     doctor_sycamore "If there’s been a past operation, we’ll need specific details — including the procedure and the medical personnel involved."
 
+    hide doctor happy talk
+    show doctor happy at sycamore_small, right
     # line 9
     doctor_sycamore "Lastly, treat every patient with care and compassion."
 
@@ -159,7 +186,7 @@ label welcome_screen:
 
     play music "background music.mp3" volume 0.1
 
-    show sycamore smiling at sycamore_small, right
+    show doctor happy talk at sycamore_small, right
     doctor_sycamore "Well, doctor — duty calls. Let’s get moving and head to the emergency room."
 
 
@@ -169,20 +196,35 @@ label patient_arrival:
     scene emergency at emergency_default
     with fade
 
-    show patient neutral looking at sycamore_small, left 
+    show patient teary looking at sycamore_small, left 
 
     "A teenager arrives at the hospital with a knee injury from a soccer game."
     "They appear nervous as they sit in the waiting area."
 
-    hide patient neutral looking
+    hide patient teary looking
 
     menu:
         "How do you approach the patient?"
         "Hi, my name is Doctor Jest. You’re in good hands — we’ll do our best to take care of you. Can you tell me what happened to your knee? Have you had any previous medical treatments we should know about?":
+            $ trust_points += 1
+            $ confidence_points += 1
+            show overlay positive answer at overlay with dissolve
+            pause 1
+            hide overlay positive answer with dissolve
             jump answer_confident_scene_1
         "What happened to your knee?":
+            $ trust_points += 0
+            $ confidence_points += 1
+            show overlay neutral answer at overlay with dissolve
+            pause 1
+            hide overlay neutral answer with dissolve
             jump answer_neutral_scene_1
         "Ermm... your knee looks bad. What happened?":
+            $ trust_points += 0
+            $ confidence_points += 0
+            show overlay negative answer at overlay with dissolve
+            pause 1
+            hide overlay negative answer with dissolve
             jump answer_anxious_scene_1
 
 label answer_anxious_scene_1:
@@ -313,10 +355,25 @@ label answer_confident_scene_1:
     menu:
         "What do you say while performing the diagnostic?"
         "I’ll be checking your knee, let me know if anything hurts, okay?":
+            $ trust_points += 1
+            $ confidence_points += 1
+            show overlay positive answer at overlay with dissolve
+            pause 1
+            hide overlay positive answer with dissolve
             jump answer_confident_scene_2
         "We need an X-ray to see inside the knee and check for tearing or fractures.":
+            $ trust_points += 0
+            $ confidence_points += 1
+            show overlay neutral answer at overlay with dissolve
+            pause 1
+            hide overlay neutral answer with dissolve
             jump answer_neutral_scene_2
         "We will proceed to do some tests. You’ll find out soon enough.":
+            $ trust_points += 0
+            $ confidence_points += 0
+            show overlay negative answer at overlay with dissolve
+            pause 1
+            hide overlay negative answer with dissolve
             jump answer_anxious_scene_2
 
 label answer_confident_scene_2:
@@ -369,10 +426,25 @@ label answer_anxious_scene_2:
     menu:
         "How do you deliver the news?"
         "Your knee has a fracture – which is treatable, and don’t worry! We’ll walk you through every step of the operation.":
+            $ trust_points += 1
+            $ confidence_points += 1
+            show overlay positive answer at overlay with dissolve
+            pause 1
+            hide overlay positive answer with dissolve
             jump answer_confident_scene_3
         "You’ll need surgery to fix your knee. It's common and you’ll surely recover.":
+            $ trust_points += 0
+            $ confidence_points += 1
+            show overlay neutral answer at overlay with dissolve
+            pause 1
+            hide overlay neutral answer with dissolve
             jump answer_neutral_scene_3
         "Dang, your knee is broken. We’ll have to operate on it.":
+            $ trust_points += 0
+            $ confidence_points += 0
+            show overlay negative answer at overlay with dissolve
+            pause 1
+            hide overlay negative answer with dissolve
             jump answer_anxious_scene_3
 
 label answer_confident_scene_3:
@@ -472,7 +544,7 @@ label answer_anxious_scene_3:
 
     # Scene 4: Surgical Preparation - Minigame Style
     label surgery_prep:
-        scene emergency at operating_default
+        scene emergency at emergency_default
         "You have finished preparing the operating room and notified the patient to proceed to the the room."
 
         with fade
@@ -623,7 +695,7 @@ label step8:
 # Step 9
 label step9:
     hide knee bracket
-    show knee stitched at knee_single
+    show knee betadine at knee_single
     "Step 9: What’s next?"
     menu:
         "Choose the correct action:"
@@ -638,7 +710,7 @@ label step9:
 
 # Step 10
 label step10:
-    hide knee stitched
+    hide knee betadine
     show knee betadine at knee_single
     "Step 10: What’s next?"
     menu:
@@ -655,18 +727,55 @@ label step10:
 
     # Scene 5: Monitoring Recovery
     label recovery:
-        scene recovery_room
+        scene emergency at emergency_default
         "You completed the surgery successfully."
 
+        "You apprroach the patient to inform them on how the surgery went."
         menu:
             "How do you inform the patient?"
             "Good news! The surgery was a success! I’ll prescribe meds and schedule physical therapy.":
+                $ trust_points += 1
+                $ confidence_points += 1
+                show overlay_positive_answer with dissolve
+                pause 1
+                hide overlay_positive_answer with dissolve
+
+                patient "Oh, thank you so much, doctor! I was really worried, but this is such a relief."
+                patient "When can I start physical therapy? I want to recover as soon as possible."
+
+                "You smile reassuringly."
+
+                you "Well, before we even start therapy, we'll be monitoring your condition for a while."
+                you "We need to make sure your knee is healing properly before putting too much strain on it."
+
+                patient "That makes sense. How long will the monitoring last?"
+
+                you "It depends on how your body responds, but usually, within a few days, we can start with some light movement exercises."
+                you "After that, we’ll gradually increase the intensity based on your progress."
+
+                patient "Alright, I’ll make sure to follow all the instructions. I just really want to get back to normal as soon as possible."
+
+                you "That’s the right attitude. Stick to the plan, and you’ll be walking pain-free in no time."
+
+                "The patient nods, looking relieved and motivated to begin their recovery journey."
+
                 jump maintenance
+
             "We fixed your knee, you’ll only partially be unable to walk.":
-                "Patient nods, a bit unsure."
+                $ trust_points += 1
+                $ confidence_points += 0
+                show overlay neutral answer at overlay with dissolve
+                pause 1
+                hide overlay neutral answer with dissolve
+                patient "neutral answer"
                 jump maintenance
             "I will be discharging you now.":
-                "Patient seems confused and concerned."
+                $ trust_points += 0
+                $ confidence_points += 0
+                show overlay negative answer at overlay with dissolve
+                pause 1
+                hide overlay negative answer with dissolve
+                patient "negative answer"
                 jump maintenance
 
     # Scene 6: Maintenance
