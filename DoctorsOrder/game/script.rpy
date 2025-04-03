@@ -55,7 +55,7 @@ image knee stitched = "knee stitched.png"
 
 
 # background images scenes
-image clinic = "clinic.jpg"
+image clinic = "clinic.png"
 image emergency = "emergency.png"
 image hospital = "hospital.png"
 image office = "office.jpg"
@@ -81,7 +81,7 @@ transform emergency_default:
     zoom 1.6
 
 transform clinic_clinic_default:
-    zoom 1.5
+    zoom 1.0
 
 transform operating_default:
     zoom 2.7
@@ -203,7 +203,7 @@ label patient_arrival:
     scene emergency at emergency_default
     with fade
 
-    show patient teary looking at sycamore_small, left 
+    show patient teary looking at sycamore_small, left
 
     "A teenager arrives at the hospital with a knee injury from a soccer game."
     "They appear nervous as they sit in the waiting area."
@@ -798,7 +798,7 @@ label step10:
             show patient happy look at sycamore_small
             "The patient nods, looking relieved and motivated to begin their recovery journey."
 
-            jump maintenance
+            jump ending
 
         "We fixed your knee, you’ll only partially be unable to walk.":
             $ trust_points += 1
@@ -846,7 +846,7 @@ label step10:
             you "Alright! That will be all. I will be seeing you soon for the general checkups."
 
             patient "Thanks Doc! I'll see you soon!"
-            jump maintenance
+            jump ending
 
         "I will be discharging you now.":
             $ trust_points += 0
@@ -872,12 +872,117 @@ label step10:
 
             "The patient looks slightly annoyed but relieved that they aren’t being sent home prematurely."
 
-            jump maintenance
+            jump ending
 
-    #POTANIGANWIDNAWIDNAUIWNDUIAWNUDIANSIUDNAISUNDUAISNbrudwasdwasd
     # Scene 6: Maintenance
-    label maintenance:
-    scene discharge_room
-    "last scene is you talk to sycamore talking about your performance"
+    label ending:
+            scene office at clinic_default
+            hide patient happy look
+            if trust_points >= 3:  # Good Ending (3/4 or 4/4 trust points)
+                jump good_ending
 
-    return
+            elif trust_points == 2:  # Neutral Ending (2/4 trust points)
+                jump neutral_ending
+
+            else:  # Bad Ending (1/4 trust point)
+                jump bad_ending
+
+            label good_ending:
+                scene office at clinic_default
+            "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
+            "You knock on Doctor Sycamore's office door."
+
+            doctor_sycamore "Come in!"
+
+            "You step inside, and Doctor Sycamore looks up from his paperwork, smiling."
+
+            show doctor happy at sycamore_small with dissolve
+
+            doctor_sycamore "Welcome back, doc! And congratulations on your first successful operation!"
+
+            doctor_sycamore "I just got the report and feedback from the patient about your care. Want to hear what they had to say?"
+
+            you "Of course, doc! How did I do?"
+
+            doctor_sycamore "You did great! Not only did you avoid making the patient anxious, but you also kept them well-informed about their treatment and recovery plan."
+
+            doctor_sycamore "They were very happy with how everything was handled, and they feel much better already."
+
+            you "That's really great to hear! I was hoping to make them feel as comfortable as possible."
+
+            doctor_sycamore "And you did exactly that. Keep up this approach, and you’ll build strong trust with your future patients."
+
+            "Doctor Sycamore pats you on the shoulder, clearly pleased with your performance."
+
+            doctor_sycamore "This was just the first of many successful cases. Keep learning, keep improving, and you’ll go far."
+
+            you "Thank you, doc. I won’t let you down!"
+
+            "Feeling a sense of accomplishment, you leave the office with renewed confidence."
+
+            label neutral_ending:
+                scene office at clinic_default
+            "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
+            "You knock on Doctor Sycamore's office door."
+
+            doctor_sycamore "Come in!"
+
+            "You step inside, and Doctor Sycamore gestures for you to sit."
+
+            show doctor_sycamore at sycamore_small with dissolve
+            doctor_sycamore "Welcome back, doc! Good job on successfully completing your first operation."
+
+            doctor_sycamore "I’ve reviewed the patient’s feedback, and while you did well overall, there were a few areas that could have gone better."
+
+            you "Oh? What do you mean?"
+
+            doctor_sycamore "Well, the patient mentioned feeling a bit anxious during the post-op discussion. Maybe they weren’t fully reassured about their recovery."
+
+            doctor_sycamore "It seems like they had some concerns that weren’t completely addressed, but they’re still grateful for the care they received."
+
+            you "I see… I’ll make sure to be more mindful of that next time."
+
+            doctor_sycamore "That’s the right attitude. You did well in terms of treatment, but remember, bedside manner is just as important as medical skill."
+
+            doctor_sycamore "Every patient deserves care that not only heals them physically but also puts them at ease mentally."
+
+            you "Understood, doc. I’ll make sure to improve my communication and reassurance next time."
+
+            doctor_sycamore "That’s all I ask. Keep learning from each experience, and you’ll become an even better doctor."
+
+            "You nod, taking his words to heart as you leave the office, determined to do better in the future."
+                
+            label bad_ending:
+                scene office at clinic_default
+            "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
+            "You knock on Doctor Sycamore's office door."
+
+            doctor_sycamore "Come in!"
+
+            "You step inside hesitantly, sensing that this conversation might not be a pleasant one."
+
+            doctor_sycamore "Welcome back, doc. I hate to say it, but we’ve got some concerns about your handling of the patient’s case."
+
+            you "What happened, doc?"
+
+            doctor_sycamore "Well… let's just say your approach in talking to the patient didn’t go too well."
+
+            you "Did I say something wrong?"
+
+            doctor_sycamore "It’s not just what you said—it’s how you said it. The patient left feeling confused and uncertain about their recovery."
+
+            doctor_sycamore "They didn’t feel reassured, and they were worried about what comes next. That’s not what we want."
+
+            you "I see… I should’ve been more careful with my explanations."
+
+            doctor_sycamore "Exactly. Patients are already stressed when they come in. The way we communicate can either put them at ease or make them feel worse."
+
+            doctor_sycamore "I know you meant well, but you need to work on your bedside manner. Medical skill is important, but so is how you interact with patients."
+
+            you "I understand, doc. I’ll work on improving that."
+
+            doctor_sycamore "Good. Because next time, I expect you to do better."
+
+            "Feeling disappointed in yourself but determined to improve, you leave the office with a new understanding of how important patient communication is."
+
+            return
