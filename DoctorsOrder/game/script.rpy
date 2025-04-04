@@ -613,7 +613,9 @@ label answer_anxious_scene_3:
 
     # Scene 4: Surgical Preparation - Minigame Style
     label surgery_prep:
-        scene emergency at emergency_default
+        stop music fadeout 1.0
+
+        scene emergency at emergency_default with fade
         "You have finished preparing the operating room and notified the patient to proceed to the the room."
 
         with fade
@@ -627,6 +629,7 @@ label answer_anxious_scene_3:
 
         "You begin the surgery on the kneecap fracture."
 
+        play music "surgery.mp3" volume 0.05
     label step1:
     hide patient teary look
     scene green_background at operating_default
@@ -1654,6 +1657,9 @@ label step11:
 
 # Bad Ending if health reaches 0
 label surgery_failed:
+    stop music fadeout 1.0
+    play music "surgery failed.mp3" volume 0.1
+
     scene black with fade
     "You made too many mistakes during the surgery..."
     "Unfortunately, the operation was unsuccessful."
@@ -1663,6 +1669,9 @@ label surgery_failed:
 
     # Scene 5: Monitoring Recovery
     label recovery:
+    stop music fadeout 1.0
+    play music "background music.mp3" volume 0.1
+
     scene emergency at emergency_default
     "You completed the surgery successfully."
 
@@ -1820,11 +1829,15 @@ label surgery_failed:
                 jump bad_ending
 
             label good_ending:
+                
+                stop music fadeout 1.0
 
                 "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
                 "You knock on Doctor Sycamore's office door, feeling proud but a little nervous."
 
                 doctor_sycamore "Come in!"
+
+                play music "good ending.mp3" volume 0.1
 
                 scene good ending with fade
 
@@ -1903,7 +1916,7 @@ label surgery_failed:
 
 
                 label neutral_ending:
-
+                    stop music fadeout 1.0
                     "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
                     "You knock on the office door, uncertain about how the case went overall."
 
@@ -1911,9 +1924,11 @@ label surgery_failed:
 
                     scene neutral ending with fade
 
+                    play music "neutral ending.mp3" volume 0.1
+
                     "You step inside. Doctor Sycamore looks up from his notes and offers you a small smile."
 
-                    show doctor happy at sycamore_small, right with dissolve
+                    show doctor happy at sycamore_small, right
 
                     doctor_sycamore "Hey, doc. Please, have a seat."
 
@@ -1930,15 +1945,15 @@ label surgery_failed:
                     doctor_sycamore "You handled most of the procedure well. The essentials were all there—diagnosis, treatment, follow-up."
 
                     hide doctor writing talk
-                    show doctor embarassed talk at sycamore_small, right with dissolve
+                    show doctor embarassed talk at sycamore_small, right
 
                     doctor_sycamore "But there were a few moments where the patient felt unsure about what was happening."
 
                     doctor_sycamore "You gave them the right care, but some steps weren’t fully explained, and that made them a little anxious."
 
                     hide doctor embarassed
-                    show doctor embarassed talk at sycamore_small, right with dissolve
-                    show patient sad talk look at sycamore_small, left with dissolve
+                    show doctor embarassed talk at sycamore_small, right
+                    show patient sad talk look at sycamore_small, left
 
                     patient "Yeah… I was a bit confused at times, doc. Like when we were going to the imaging room—I wasn’t sure what to expect."
 
@@ -1977,8 +1992,8 @@ label surgery_failed:
 
                     you "Thanks, Steven. That means a lot. I’ll do better next time."
 
-                    hide patient neutral look with dissolve
-                    hide doctor embarassed
+                    hide patient neutral look
+                    hide doctor embarassed 
                     show doctor embarassed talk at sycamore_small, right
 
                     doctor_sycamore "You’re learning, and that’s what matters most. Let’s build on this experience and move forward."
@@ -1992,40 +2007,42 @@ label surgery_failed:
                 
                 label bad_ending:
                     scene bad ending
-
+                    stop music fadeout 1.0
                     "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
                     "You knock on Doctor Sycamore's office door."
 
                     doctor_sycamore "Come in!"
 
+                    play music "bad ending.mp3" volume 0.1
+
                     "You step inside hesitantly, sensing that this conversation might not be a pleasant one."
 
-                    show doctor disappointed talk at sycamore_small, right with dissolve
+                    show doctor disappointed talk at sycamore_small, right
 
                     doctor_sycamore "Welcome back, doc. I hate to say it, but we’ve got some concerns about your handling of the patient’s case."
 
                     hide doctor disappointed talk
-                    show doctor disappointed at sycamore_small, right with dissolve
+                    show doctor disappointed at sycamore_small, right
 
                     you "What happened, doc?"
 
-                    show doctor disappointed talk at sycamore_small, right with dissolve
+                    show doctor disappointed talk at sycamore_small, right
 
                     doctor_sycamore "Well… let's just say your approach in talking to the patient didn’t go too well."
 
                     hide doctor disappointed talk
-                    show doctor disappointed at sycamore_small, right with dissolve
+                    show doctor disappointed at sycamore_small, right
 
                     you "Did I say something wrong?"
 
-                    show doctor disappointed talk at sycamore_small, right with dissolve
+                    show doctor disappointed talk at sycamore_small, right
 
                     doctor_sycamore "It’s not just what you said—it’s how you said it. The patient left feeling confused and uncertain about their recovery."
 
                     doctor_sycamore "They didn’t feel reassured, and they were worried about what comes next. That’s not what we want."
 
                     hide doctor disappointed talk
-                    show doctor disappointed at sycamore_small, right with dissolve
+                    show doctor disappointed at sycamore_small, right
 
                     you "I see… I should’ve been more careful with my explanations."
                     
@@ -2036,12 +2053,12 @@ label surgery_failed:
                     doctor_sycamore "I know you meant well, but you need to work on your bedside manner. Medical skill is important, but so is how you interact with patients."
 
                     hide doctor happy talk
-                    show doctor happy at sycamore_small, right with dissolve
+                    show doctor happy at sycamore_small, right
 
                     you "I understand, doc. I’ll work on improving that."
                     
                     hide doctor happy
-                    show doctor happy talk at sycamore_small, right with dissolve
+                    show doctor happy talk at sycamore_small, right
 
                     doctor_sycamore "Good. Because next time, I expect you to do better."
 

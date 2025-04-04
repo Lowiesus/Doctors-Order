@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 33: EOL while scanning string literal
-    _p("Ethari Damien
+File "game/script.rpy", line 2025: end of line expected.
+    show doctor disappointed at sycamore_small, right w
+                                                      ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Sat Apr  5 00:40:15 2025
+Sat Apr  5 01:28:14 2025
