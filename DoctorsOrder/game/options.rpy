@@ -24,14 +24,16 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = ""
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-""")
+Doctor's Orders: Emergency Room Edition is made by students in accordance to their Human Computer Interaction subject.
+
+The game aims to improve players’ understanding of medical procedures while incorporating an intuitive user interface and feedback-driven mechanics. By combining interactive decision-making and a health bar mechanic that responds to user inputs, the game fosters an engaging and informative learning environment.""")
 
 
 ## A short name for the game used for executables and directories in the built

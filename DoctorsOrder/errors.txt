@@ -2,53 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1596: if statement expects a non-empty block.
-    if health_points == 1:
-                          ^
-
-File "game/script.rpy", line 1597: expected menuitem
-    show health 1
-    ^
-
-File "game/script.rpy", line 1598: expected statement.
-    elif health_points == 2:
-                       ^
-
-File "game/script.rpy", line 1600: expected statement.
-    elif health_points == 3:
-                       ^
-
-File "game/script.rpy", line 1602: expected statement.
-    elif health_points == 4:
-                       ^
-
-File "game/script.rpy", line 1604: expected statement.
-    elif health_points == 5:
-                       ^
-
-File "game/script.rpy", line 1606: expected statement.
-    elif health_points == 6:
-                       ^
-
-File "game/script.rpy", line 1608: expected statement.
-    elif health_points == 7:
-                       ^
-
-File "game/script.rpy", line 1610: expected statement.
-    elif health_points == 8:
-                       ^
-
-File "game/script.rpy", line 1612: expected statement.
-    elif health_points == 9:
-                       ^
-
-File "game/script.rpy", line 1614: expected statement.
-    elif health_points == 10:
-                       ^
-
-File "game/script.rpy", line 1616: expected statement.
-    elif health_points == 11:
-                       ^
+File "game/options.rpy", line 33: EOL while scanning string literal
+    _p("Ethari Damien
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Apr  4 19:30:32 2025
+Sat Apr  5 00:40:15 2025
