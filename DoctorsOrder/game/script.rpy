@@ -10,20 +10,35 @@ define patient = Character("Patient", who_color = "#c84b4b")
 define you = Character("You", who_color = "#ea0d7f")
 define disclaimer = Character ("Disclaimer", who_color = "#b42020")
 
+# images for the healthbar
 
-# image for doctor sycamoer
+image health 1 = "health 1.png"
+image health 2 = "health 2.png"
+image health 3 = "health 3.png"
+image health 4 = "health 4.png"
+image health 5 = "health 5.png"
+image health 6 = "health 6.png"
+image health 7 = "health 7.png"
+image health 8 = "health 8.png"
+image health 9 = "health 9.png"
+image health 10 = "health 10.png"
+image health 11 = "health 11.png"
+
+# images for doctor sycamore
+image doctor look = "doctor close.png"
 image doctor writing talk = "doctor writing talk.png"
 image doctor happy = "doctor happy.png"
 image doctor talk = "doctor talk.png"
 image doctor smile = "doctor smile.png"
 image doctor happy talk = "doctor happy talk.png"
 image doctor writing = "doctor writing.png"
-image doctor embarassed = "doctor embarassed.png"
-image doctor disappoint = "doctor disappoint.png"
-image doctor close = "doctor close.png"
+image doctor disappointed = "doctor disappointed.png"
+image doctor disappointed talk = "doctor disappointed talk.png"
 image doctor talking = "doctor talking.png"
+image doctor embarassed = "doctor embarrased talk"
+image doctor embarassed talk = "doctor embarrased talk.png"
 
-#image for the patient
+#images for the patient
 image patient neutral ="patient neutral.png"
 image patient happy = "patient happy.png"
 image patient sad = "patient sad.png"
@@ -41,10 +56,12 @@ image patient happy talk looking = "patient happy talk look.png"
 image patient sad talk looking = "patient sad talk look.png"
 image patient teary talk looking = "patient teary talk look.png"
 
+# images for the overlay
 image overlay positive answer = "8.png"
 image overlay neutral answer = "9.png"
 image overlay negative answer = "10.png"
 
+# images for the knees
 image knee = "knee.png"
 image knee focus = "knee focus.png"
 image knee betadine = "knee betadine.png"
@@ -557,17 +574,17 @@ label answer_neutral_scene_3:
     hide doctor talk
     show doctor happy at sycamore_small, right
     hide patient sad looking
-    show patient sad talk at sycamore_small, right
+    show patient sad talk at sycamore_small, left
 
     patient "Nice to meet you, Doc! I'm Steven Nicholas."
 
     hide patient sad talk
-    show patient sad look at sycamore_small, right
+    show patient sad look at sycamore_small, left
     
     you "Now that you've signed the consent form, we'll begin preparing the operating room. We'll notify you when it's time to proceed."
     
     hide patient sad look
-    show patient sad talk at sycamore_small, right
+    show patient sad talk at sycamore_small, left
 
     patient "Got it, Doc. Thanks!"
     
@@ -615,24 +632,99 @@ label answer_anxious_scene_3:
     scene green_background at operating_default
 
     with fade
+
     show knee at knee_single_default
     "Step 1: Preparing the knee"
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+    
 
     menu:
         "Choose the correct action:"
         "Sterilize the knee using antiseptic.":
             doctor_sycamore "We need to mark the incision first."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            # Update health bar based on the current health
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step1
         "Mark the knee for the incision.":
+            $ health_points += 1
             jump step2
         "Cut the skin of the knee.":
             doctor_sycamore "That’s too early! The area isn’t even sterile."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            # Update health bar based on the current health
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step1
@@ -641,21 +733,94 @@ label step2:
     hide knee
     show knee dash line at knee_single with dissolve
     "Step 2: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Sanitize the knee with betadine.":
+            $ health_points += 1
             jump step3
         "Tap the knee with a hammer":
             doctor_sycamore "That’s not appropriate!"
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step2
         "Cut the skin of the knee":
             doctor_sycamore "Sanitizing is required before cutting."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step2
@@ -663,45 +828,217 @@ label step2:
 label step3:
     hide knee dash line
     show knee betadine at knee_single with dissolve
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     "Step 3: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Apply anesthesia":
+            $ health_points += 1
             jump step4
+
         "Bend the knee":
             doctor_sycamore "That’s unnecessary here."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step3
         "Apply for college":
             doctor_sycamore "Now’s not the time for that!"
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step3
 
 label step4:
+
     hide knee dash line
     show knee inject at knee_single with dissolve
     "Step 4: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Put an incision where the mark is":
+            $ health_points += 1
             jump step5
         "Put an incision next to the mark":
             doctor_sycamore "You must be precise."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step4
         "Put an incision above the mark":
             doctor_sycamore "Not accurate!"
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step4
@@ -710,21 +1047,94 @@ label step5:
     hide knee inject
     show knee open at knee_single with dissolve
     "Step 5: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Use surgical clamps to hold the skin.":
+            $ health_points += 1
             jump step6
         "Hit the bone with a hammer.":
             doctor_sycamore "That would be very harmful."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step5
         "Use the saw to remove the fractured bone.":
             doctor_sycamore "Too early to do this."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step5
@@ -733,21 +1143,94 @@ label step6:
     hide knee open
     show knee clamps at knee_single with dissolve
     "Step 6: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Use a drill to put holes on the bone where the screws, wires, metal plates will be placed.":
+            $ health_points += 1
             jump step7
         "Close the wound with clamps and stitch it back closed.":
             doctor_sycamore "You're not done yet!"
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step6
         "Remove the fractured bone and replace it with a prosthetic kneecap.":
             doctor_sycamore "That's not needed in this case."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step6
@@ -756,21 +1239,94 @@ label step7:
     hide knee clamps
     show knee hole at knee_single with dissolve
     "Step 7: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Use metal plates and wires to put the fractured kneecap back in place.":
+            $ health_points += 1
             jump step8
         "Use prosthetic kneecaps to replace the fractured one.":
             doctor_sycamore "That’s not necessary for this injury."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step7
         "Use a hammer to break away the rest of the broken bones.":
             doctor_sycamore "No! That would worsen the injury."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step7
@@ -779,21 +1335,94 @@ label step8:
     hide knee hole
     show knee bracket at knee_single with dissolve
     "Step 8: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Remove the clamps holding the loose skin.":
+            $ health_points += 1
             jump step9
         "Hammer the metal plates and screws to make sure they’re sturdy.":
             doctor_sycamore "No need to hammer them in."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step8
         "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
             doctor_sycamore "It’s too late for that now."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step8
@@ -802,21 +1431,94 @@ label step9:
     hide knee bracket
     show knee closed at knee_single with dissolve
     "Step 9: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Stitch the wound closed after removing the clamps.":
+            $ health_points += 1
             jump step10
         "Hammer the metal plates and screws to make sure they’re sturdy.":
             doctor_sycamore "No need to hammer them in."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step9
         "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
             doctor_sycamore "It’s too late for that now."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step9
@@ -825,22 +1527,95 @@ label step10:
     hide knee betadine
     show knee stitched at knee_single with dissolve
     "Step 10: What’s next?"
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
+
     menu:
         "Choose the correct action:"
         "Apply antiseptic and bandage the wound.":
             "The wound is now properly closed and protected."
+            $ health_points += 1
             jump step11
         "Hammer the metal plates and screws to make sure they’re sturdy.":
             doctor_sycamore "No need to hammer them in."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step10
         "Clean the bone using isopropyl alcohol to ensure the metal plates and screws are clean.":
             doctor_sycamore "It’s too late for that now."
             $ health_points -= 1
-            $ mistake_points + 1
+            $ mistake_points += 1
+
+            if health_points == 1:
+                show health 1
+            elif health_points == 2:
+                show health 2
+            elif health_points == 3:
+                show health 3
+            elif health_points == 4:
+                show health 4
+            elif health_points == 5:
+                show health 5
+            elif health_points == 6:
+                show health 6
+            elif health_points == 7:
+                show health 7
+            elif health_points == 8:
+                show health 8
+            elif health_points == 9:
+                show health 9
+            elif health_points == 10:
+                show health 10
+            elif health_points == 11:
+                show health 11
+
             if health_points <= 0:
                 jump surgery_failed
             jump step10
@@ -848,6 +1623,29 @@ label step10:
 label step11:
     hide knee stitched
     show knee bandaged at knee_single with dissolve
+
+    if health_points == 1:
+        show health 1
+    elif health_points == 2:
+        show health 2
+    elif health_points == 3:
+        show health 3
+    elif health_points == 4:
+        show health 4
+    elif health_points == 5:
+        show health 5
+    elif health_points == 6:
+        show health 6
+    elif health_points == 7:
+        show health 7
+    elif health_points == 8:
+        show health 8
+    elif health_points == 9:
+        show health 9
+    elif health_points == 10:
+        show health 10
+    elif health_points == 11:
+        show health 11
 
     doctor_sycamore "Well, that should do it!"
     doctor_sycamore "Good job! We have successfully completed the surgery."
@@ -1022,105 +1820,233 @@ label surgery_failed:
                 jump bad_ending
 
             label good_ending:
+
+                "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
+                "You knock on Doctor Sycamore's office door, feeling proud but a little nervous."
+
+                doctor_sycamore "Come in!"
+
+                scene good ending with fade
+
+                "You step inside. Doctor Sycamore looks up from his paperwork and smiles warmly."
+
+                show doctor writing talk at sycamore_small, right with dissolve
+
+                doctor_sycamore "Welcome back, doc! And congratulations on your first successful operation!"
+
+                hide doctor writing
+                show doctor writing talk at sycamore_small, right
+
+                doctor_sycamore "I just received the patient’s report and feedback on the care you provided. Want to hear what they had to say?"
+
+                hide doctor writing talk
+                show doctor writing at sycamore_small, right
+
+                you "Of course, doc! How did I do?"
+
+                hide doctor writing
+                show doctor writing talk at sycamore_small, right
+
+                doctor_sycamore "You did great! You not only avoided making the patient anxious, but you also kept them well-informed about the treatment and recovery process."
+
+                doctor_sycamore "They were very pleased with how everything was handled, and they're already feeling much better."
+
+                doctor_sycamore "In fact, I thought it’d be even better if you heard it from them directly."
+
+                hide doctor writing talk
+                show doctor happy at sycamore_small, right with dissolve
+                show patient happy talk at sycamore_small, left with dissolve
+
+                patient "Hey, doc!"
+
+                show patient happy at sycamore_small, left
+
+                you "Oh! Hey, Steven! How are you feeling?"
+
+                show patient happy talk at sycamore_small, left
+
+                patient "Honestly? I feel better than ever—all thanks to you!"
+
+                hide patient happy talk
+                show patient happy at sycamore_small, left
+
+                show doctor happy talk at sycamore_small, right
+
+                doctor_sycamore "That's right! You did a fantastic job. You really made a difference."
+
+                hide doctor happy talk
+                show doctor happy at sycamore_small, right
+
+                you "That’s really great to hear. I just wanted to make sure you felt supported and comfortable."
+
+                show doctor happy talk at sycamore_small, right
+
+                doctor_sycamore "And you did exactly that. Keep this up, and you’ll earn the trust of every patient you treat."
+
+                hide doctor happy talk
+                show doctor happy at sycamore_small, right
+
+                "Doctor Sycamore pats you on the shoulder, clearly proud of your performance."
+
+                show doctor happy talk at sycamore_small, right
+
+                doctor_sycamore "This is just the beginning, you know. Keep learning, stay compassionate, and you'll go far in this field."
+
+                hide doctor happy talk
+                show doctor happy at sycamore_small, right
+
+                you "Thank you, doc. I really appreciate it. I won’t let you down."
+
+                "Feeling a deep sense of accomplishment, you leave the office with renewed confidence—ready for the next challenge ahead."
+
+                return
+
+
+                label neutral_ending:
+
+                    "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
+                    "You knock on the office door, uncertain about how the case went overall."
+
+                    doctor_sycamore "Come in."
+
+                    scene neutral ending with fade
+
+                    "You step inside. Doctor Sycamore looks up from his notes and offers you a small smile."
+
+                    show doctor happy at sycamore_small, right with dissolve
+
+                    doctor_sycamore "Hey, doc. Please, have a seat."
+
+                    hide doctor happy
+                    show doctor writing talk at sycamore_small, right
+
+                    doctor_sycamore "I reviewed your case and the feedback we received from the patient. Would you like to go over it together?"
+
+                    hide doctor writing talk
+                    show doctor writing talk at sycamore_small, right
+
+                    you "Yes, of course. I’d like to hear how I did."
+
+                    doctor_sycamore "You handled most of the procedure well. The essentials were all there—diagnosis, treatment, follow-up."
+
+                    hide doctor writing talk
+                    show doctor embarassed talk at sycamore_small, right with dissolve
+
+                    doctor_sycamore "But there were a few moments where the patient felt unsure about what was happening."
+
+                    doctor_sycamore "You gave them the right care, but some steps weren’t fully explained, and that made them a little anxious."
+
+                    hide doctor embarassed
+                    show doctor embarassed talk at sycamore_small, right with dissolve
+                    show patient sad talk look at sycamore_small, left with dissolve
+
+                    patient "Yeah… I was a bit confused at times, doc. Like when we were going to the imaging room—I wasn’t sure what to expect."
+
+                    hide patient sad talk look
+                    show patient sad look at sycamore_small, left
+
+                    you "I see... I’m really sorry about that, Steven. I should’ve taken more time to explain everything clearly."
+
+                    hide doctor embarassed
+                    show doctor embarassed talk at sycamore_small, right
+
+                    doctor_sycamore "It’s part of the learning process. You didn’t cause harm, and you were still attentive and respectful."
+
+                    doctor_sycamore "Just remember—communication is just as important as the procedure itself."
+
+                    hide doctor embarassed talk
+                    show doctor embarassed at sycamore_small, right
+
+                    "Doctor Sycamore gives you an encouraging nod, his tone honest but supportive."
+
+                    show doctor embarassed talk at sycamore_small, right
+
+                    doctor_sycamore "You’re on the right track. Keep working on how you connect with patients—it’ll make a big difference."
+
+                    hide doctor embarassed talk
+                    show doctor embarassed at sycamore_small, right
+
+                    you "Thank you, doc. I’ll definitely work on that."
+
+                    show patient sad talk look at sycamore_small, left
+
+                    patient "I still appreciate everything you did, doc. I know you cared—I just needed a bit more clarity."
+
+                    hide patient sad talk
+                    show patient neutral look at sycamore_small, left
+
+                    you "Thanks, Steven. That means a lot. I’ll do better next time."
+
+                    hide patient neutral look with dissolve
+                    hide doctor embarassed
+                    show doctor embarassed talk at sycamore_small, right
+
+                    doctor_sycamore "You’re learning, and that’s what matters most. Let’s build on this experience and move forward."
+
+                    hide doctor embarassed talk with dissolve
+
+                    "Though not perfect, you leave the office with a clearer understanding of what it means to care for patients—not just medically, but emotionally too."
+
+                    return
+
                 
-            "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
-            "You knock on Doctor Sycamore's office door."
+                label bad_ending:
+                    scene bad ending
 
-            doctor_sycamore "Come in!"
+                    "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
+                    "You knock on Doctor Sycamore's office door."
 
-            scene good ending with fade
+                    doctor_sycamore "Come in!"
 
-            "You step inside, and Doctor Sycamore looks up from his paperwork, smiling."
+                    "You step inside hesitantly, sensing that this conversation might not be a pleasant one."
 
-            show doctor happy talk at sycamore_small, right with dissolve
+                    show doctor disappointed talk at sycamore_small, right with dissolve
 
-            doctor_sycamore "Welcome back, doc! And congratulations on your first successful operation!"
+                    doctor_sycamore "Welcome back, doc. I hate to say it, but we’ve got some concerns about your handling of the patient’s case."
 
-            hide doctor happy talk
-            show doctor writing at sycamore_small, right with dissolve
-            doctor_sycamore "I just got the report and feedback from the patient about your care. Want to hear what they had to say?"
+                    hide doctor disappointed talk
+                    show doctor disappointed at sycamore_small, right with dissolve
 
-            you "Of course, doc! How did I do?"
+                    you "What happened, doc?"
 
-            doctor_sycamore "You did great! Not only did you avoid making the patient anxious, but you also kept them well-informed about their treatment and recovery plan."
+                    show doctor disappointed talk at sycamore_small, right with dissolve
 
-            doctor_sycamore "They were very happy with how everything was handled, and they feel much better already."
+                    doctor_sycamore "Well… let's just say your approach in talking to the patient didn’t go too well."
 
-            you "That's really great to hear! I was hoping to make them feel as comfortable as possible."
+                    hide doctor disappointed talk
+                    show doctor disappointed at sycamore_small, right with dissolve
 
-            doctor_sycamore "And you did exactly that. Keep up this approach, and you’ll build strong trust with your future patients."
+                    you "Did I say something wrong?"
 
-            "Doctor Sycamore pats you on the shoulder, clearly pleased with your performance."
+                    show doctor disappointed talk at sycamore_small, right with dissolve
 
-            doctor_sycamore "This was just the first of many successful cases. Keep learning, keep improving, and you’ll go far."
+                    doctor_sycamore "It’s not just what you said—it’s how you said it. The patient left feeling confused and uncertain about their recovery."
 
-            you "Thank you, doc. I won’t let you down!"
+                    doctor_sycamore "They didn’t feel reassured, and they were worried about what comes next. That’s not what we want."
 
-            "Feeling a sense of accomplishment, you leave the office with renewed confidence."
+                    hide doctor disappointed talk
+                    show doctor disappointed at sycamore_small, right with dissolve
 
-            label neutral_ending:
-                scene office at clinic_default
-            "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
-            "You knock on Doctor Sycamore's office door."
+                    you "I see… I should’ve been more careful with my explanations."
+                    
+                    show doctor happy talk at sycamore_small, right
 
-            doctor_sycamore "Come in!"
+                    doctor_sycamore "Exactly. Patients are already stressed when they come in. The way we communicate can either put them at ease or make them feel worse."
 
-            "You step inside, and Doctor Sycamore gestures for you to sit."
+                    doctor_sycamore "I know you meant well, but you need to work on your bedside manner. Medical skill is important, but so is how you interact with patients."
 
-            show doctor_sycamore at sycamore_small, right with dissolve
-            doctor_sycamore "Welcome back, doc! Good job on successfully completing your first operation."
+                    hide doctor happy talk
+                    show doctor happy at sycamore_small, right with dissolve
 
-            doctor_sycamore "I’ve reviewed the patient’s feedback, and while you did well overall, there were a few areas that could have gone better."
+                    you "I understand, doc. I’ll work on improving that."
+                    
+                    hide doctor happy
+                    show doctor happy talk at sycamore_small, right with dissolve
 
-            you "Oh? What do you mean?"
+                    doctor_sycamore "Good. Because next time, I expect you to do better."
 
-            doctor_sycamore "Well, the patient mentioned feeling a bit anxious during the post-op discussion. Maybe they weren’t fully reassured about their recovery."
+                    hide doctor happy with dissolve
 
-            doctor_sycamore "It seems like they had some concerns that weren’t completely addressed, but they’re still grateful for the care they received."
+                    "Feeling disappointed in yourself but determined to improve, you leave the office with a new understanding of how important patient communication is."
 
-            you "I see… I’ll make sure to be more mindful of that next time."
-
-            doctor_sycamore "That’s the right attitude. You did well in terms of treatment, but remember, bedside manner is just as important as medical skill."
-
-            doctor_sycamore "Every patient deserves care that not only heals them physically but also puts them at ease mentally."
-
-            you "Understood, doc. I’ll make sure to improve my communication and reassurance next time."
-
-            doctor_sycamore "That’s all I ask. Keep learning from each experience, and you’ll become an even better doctor."
-
-            "You nod, taking his words to heart as you leave the office, determined to do better in the future."
-                
-            label bad_ending:
-                scene office at clinic_default
-            "You proceed to Doctor Sycamore's office to report and verify the case of the patient."
-            "You knock on Doctor Sycamore's office door."
-
-            doctor_sycamore "Come in!"
-
-            "You step inside hesitantly, sensing that this conversation might not be a pleasant one."
-
-            doctor_sycamore "Welcome back, doc. I hate to say it, but we’ve got some concerns about your handling of the patient’s case."
-
-            you "What happened, doc?"
-
-            doctor_sycamore "Well… let's just say your approach in talking to the patient didn’t go too well."
-
-            you "Did I say something wrong?"
-
-            doctor_sycamore "It’s not just what you said—it’s how you said it. The patient left feeling confused and uncertain about their recovery."
-
-            doctor_sycamore "They didn’t feel reassured, and they were worried about what comes next. That’s not what we want."
-
-            you "I see… I should’ve been more careful with my explanations."
-
-            doctor_sycamore "Exactly. Patients are already stressed when they come in. The way we communicate can either put them at ease or make them feel worse."
-
-            doctor_sycamore "I know you meant well, but you need to work on your bedside manner. Medical skill is important, but so is how you interact with patients."
-
-            you "I understand, doc. I’ll work on improving that."
-
-            doctor_sycamore "Good. Because next time, I expect you to do better."
-
-            "Feeling disappointed in yourself but determined to improve, you leave the office with a new understanding of how important patient communication is."
-
-            return
+                    return
